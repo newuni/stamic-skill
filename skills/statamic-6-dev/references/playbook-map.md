@@ -182,6 +182,12 @@ Next (pending):
 - [ ] **Static caching** — `DRAFTED`
   - Docs: https://statamic.dev/advanced-topics/static-caching
 
+Advanced Topics (more):
+- [ ] Debugging — `DRAFTED` — https://statamic.dev/advanced-topics/debugging
+- [ ] OAuth — `DRAFTED` — https://statamic.dev/advanced-topics/oauth
+- [ ] Task scheduling — `DRAFTED (page missing/404 in 6.x)` — https://statamic.dev/advanced-topics/task-scheduling
+- [ ] Sending email — `DRAFTED (page missing/404 in 6.x)` — https://statamic.dev/advanced-topics/sending-email
+
 ### Frontend / Templating
 
 - [ ] **Antlers** — `PENDING`
