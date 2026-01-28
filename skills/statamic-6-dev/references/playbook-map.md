@@ -208,7 +208,14 @@ Next (pending):
 - [ ] Widgets — `DRAFTED` — https://statamic.dev/widgets/all-widgets
 
 Next-next (pending):
-- [ ] Widgets: building a widget — `PENDING`
-- [ ] Utilities (addons) — `PENDING`
-- [ ] Commands (addons) — `PENDING`
-- [ ] Control Panel (addons) / Inertia pages — `PENDING`
+- [ ] Widgets: building a widget — `DRAFTED` — https://statamic.dev/widgets/building-a-widget
+- [ ] Utilities (CP) — `DRAFTED` — https://statamic.dev/control-panel/utilities
+- [ ] Commands (addons) — `DRAFTED` — (see building addon docs)
+- [ ] Control Panel (Inertia pages) — `DRAFTED` — https://statamic.dev/control-panel/css-javascript
+- [ ] Testing (addons) — `DRAFTED` — https://statamic.dev/addons/testing
+
+Next-next-next (pending):
+- [ ] Actions (addons) — `PENDING`
+- [ ] Hooks — `PENDING`
+- [ ] Events — `PENDING`
+- [ ] Vue components / UI components (extending) — `PENDING`
