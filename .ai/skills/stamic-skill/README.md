@@ -24,6 +24,14 @@ Esto instalará `stamic-skill` como skill local dentro del proyecto.
 - Comprueba que existe una carpeta instalada para la skill (según cómo Boost la materialice en tu proyecto).
 - Pídele a tu asistente algo como: “Usa la skill stamic-skill y explícame cómo gestionar assets en Statamic”.
 
+### Troubleshooting
+
+- Si la skill “no aparece”, re-sincroniza:
+  ```bash
+  php artisan boost:add-skill newuni/stamic-skill/.ai/skills
+  ```
+- Si usas overrides, asegúrate de no estar reemplazando `stamic-skill`.
+
 ### Actualizar
 
 Vuelve a ejecutar `boost:add-skill ...` para re-sincronizar.

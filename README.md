@@ -106,6 +106,28 @@ Buscar en el mirror:
 - Si una URL cambió (p.ej. páginas movidas en 6.x), se actualiza el `playbook-map.md`.
 - Algunas páginas pueden no existir en 6.x (se deja anotado como *missing/removed*).
 
+## Troubleshooting
+
+### Boost: la skill no aparece / no parece cargarse
+
+1) Asegúrate de estar en Boost v2:
+```bash
+composer show laravel/boost
+```
+2) Reinstala / re-sincroniza:
+```bash
+php artisan boost:add-skill newuni/stamic-skill/.ai/skills
+```
+3) Si tienes overrides en el proyecto, revisa que no estés sobreescribiendo `stamic-skill`.
+
+### Clawdbot: no veo `stamic-skill`
+
+- Verifica el symlink:
+```bash
+ls -la /root/clawd/skills/stamic-skill
+```
+- Si no se refresca, reinicia el gateway de Clawdbot.
+
 ## Contribuir
 
 - Añade/edita un playbook en `references/playbooks/`.
