@@ -233,4 +233,4 @@ Next after that (pending):
 - [ ] Repositories — `DRAFTED` — https://statamic.dev/backend-apis/repositories
 - [ ] Data retrieval and manipulation — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/data-retrieval-and-manipulation
 - [ ] Resource APIs — `DRAFTED (page stub in 6.x)` — https://statamic.dev/backend-apis/resource-apis
-- [ ] Vue components (deeper) — `PENDING`
+- [ ] Vue components (deeper) — `DRAFTED` — (recipes + append patterns)
