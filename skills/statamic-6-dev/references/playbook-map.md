@@ -64,19 +64,19 @@ Getting Started (links only for now):
 - [ ] **Collections** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/collections
 
-- [ ] **Taxonomies** — `PENDING`
+- [ ] **Taxonomies** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/taxonomies
 
-- [ ] **Globals** — `PENDING`
+- [ ] **Globals** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/globals
 
-- [ ] **Navigation** — `PENDING`
+- [ ] **Navigation** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/navigation
 
-- [ ] **Routing** — `PENDING`
+- [ ] **Routing** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/routing
 
-- [ ] **Blueprints** — `PENDING`
+- [ ] **Blueprints** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/blueprints
 
 - [ ] **Fieldsets** — `PENDING`
