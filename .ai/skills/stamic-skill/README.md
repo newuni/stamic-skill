@@ -4,13 +4,29 @@ Este directorio contiene la skill en el formato esperado por **Laravel Boost v2*
 
 ## Instalación (Boost v2)
 
-Desde un proyecto Laravel:
+### 1) Instala/actualiza Boost v2 en tu proyecto
+
+```bash
+composer require laravel/boost:^2
+php artisan boost:install
+```
+
+### 2) Añade esta skill desde GitHub
 
 ```bash
 php artisan boost:add-skill newuni/stamic-skill/.ai/skills
 ```
 
-Eso instalará `stamic-skill` como skill local dentro del proyecto.
+Esto instalará `stamic-skill` como skill local dentro del proyecto.
+
+### 3) Verificación rápida
+
+- Comprueba que existe una carpeta instalada para la skill (según cómo Boost la materialice en tu proyecto).
+- Pídele a tu asistente algo como: “Usa la skill stamic-skill y explícame cómo gestionar assets en Statamic”.
+
+### Actualizar
+
+Vuelve a ejecutar `boost:add-skill ...` para re-sincronizar.
 
 ## Qué incluye
 

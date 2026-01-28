@@ -2,7 +2,9 @@
 
 Skill local para Clawdbot orientada a **desarrollo con Statamic 6**: busca documentación oficial (statamic.dev + mirror `statamic/docs`) y responde con pasos accionables, citas y snippets.
 
-> Nota: el nombre de la carpeta/skill key es `stamic-skill`, pero el `name:` interno del SKILL es `statamic-6-dev`.
+> Nota: para **Laravel Boost v2**, el *skill key* y el `name:` del `SKILL.md` son **`stamic-skill`**.
+> 
+> Para compatibilidad con el entorno anterior de Clawdbot, también existe la carpeta histórica `skills/statamic-6-dev/` (mismo contenido, distinta ruta).
 
 ## Qué incluye
 
@@ -13,17 +15,30 @@ Skill local para Clawdbot orientada a **desarrollo con Statamic 6**: busca docum
 
 ## Instalación
 
-### Laravel Boost v2
+### Laravel Boost v2 (instalación recomendada)
 
 Este repo incluye el formato Boost v2 bajo:
 
 - `.ai/skills/stamic-skill/`
 
-Instalación desde un proyecto:
+**Prerequisito:** tener Boost v2 instalado en el proyecto.
+
+```bash
+composer require laravel/boost:^2
+php artisan boost:install
+```
+
+**Instalar la skill desde GitHub:**
 
 ```bash
 php artisan boost:add-skill newuni/stamic-skill/.ai/skills
 ```
+
+Eso instalará `stamic-skill` como skill local dentro del proyecto.
+
+**Actualizar / re-sincronizar:**
+- Vuelve a ejecutar `boost:add-skill` (Boost v2 hace sync de skills).
+- Si usas overrides en el proyecto, revisa la sección de overrides de Boost v2.
 
 ### Clawdbot (uso en local)
 
@@ -31,7 +46,11 @@ En Clawdbot puedes usarla en local mediante un symlink dentro del workspace:
 
 ```bash
 cd /root/clawd
-ln -sfn ../projects/stamic-skill/skills/statamic-6-dev skills/stamic-skill
+# opción recomendada (apunta al formato Boost, mismo contenido)
+ln -sfn ../projects/stamic-skill/.ai/skills/stamic-skill skills/stamic-skill
+
+# opción legacy (mantiene la ruta histórica)
+# ln -sfn ../projects/stamic-skill/skills/statamic-6-dev skills/stamic-skill
 ```
 
 Con eso, Clawdbot puede “ver” la skill como `stamic-skill`.
