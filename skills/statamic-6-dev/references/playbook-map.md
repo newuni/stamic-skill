@@ -154,6 +154,10 @@ Next (pending):
 - [ ] Search (frontend) — `DRAFTED` — https://statamic.dev/frontend/search
 - [ ] Image manipulation (Glide) — `DRAFTED` — https://statamic.dev/frontend/image-manipulation
 - [ ] Controllers — `DRAFTED` — https://statamic.dev/frontend/controllers
+- [ ] View Models — `DRAFTED` — https://statamic.dev/frontend/view-models
+- [ ] Protecting Content — `DRAFTED` — https://statamic.dev/frontend/protecting-content
+- [ ] REST API — `DRAFTED` — https://statamic.dev/frontend/rest-api
+- [ ] GraphQL API — `DRAFTED` — https://statamic.dev/graphql
 
 ---
 
