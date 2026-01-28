@@ -222,8 +222,13 @@ Next-next-next (pending):
 - [ ] UI components — `DRAFTED` — https://ui.statamic.dev
 
 Next (pending):
-- [ ] Blink cache — `PENDING` — https://statamic.dev/backend-apis/blink-cache
-- [ ] Event bus — `PENDING` — https://statamic.dev/backend-apis/event-bus
-- [ ] Dirty state tracking — `PENDING` — https://statamic.dev/backend-apis/dirty-state-tracking
-- [ ] Slugs — `PENDING` — https://statamic.dev/backend-apis/slugs
-- [ ] Progress — `PENDING` — https://statamic.dev/backend-apis/progress
+- [ ] Blink cache — `DRAFTED` — https://statamic.dev/backend-apis/blink-cache
+- [ ] Event bus — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/event-bus
+- [ ] Dirty state tracking — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/dirty-state-tracking
+- [ ] Slugs — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/slugs
+- [ ] Progress — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/progress
+
+Next after that (pending):
+- [ ] Query scopes & filters — `PENDING`
+- [ ] Repositories / data retrieval & manipulation — `PENDING`
+- [ ] Vue components (deeper) — `PENDING`
