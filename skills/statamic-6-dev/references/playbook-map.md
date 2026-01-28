@@ -161,25 +161,25 @@ Next (pending):
 
 ### Ops / Deployment
 
-- [ ] **Timezones (UTC, display timezone, modifiers)** — `PENDING`
+- [ ] **Timezones (UTC, display timezone, modifiers)** — `DRAFTED`
   - Docs: https://statamic.dev/knowledge-base/tips/timezones
   - Related: https://statamic.dev/knowledge-base/tips/change-timezone-to-utc
 
-- [ ] **Zero downtime deployments (multi-release, cache isolation, git automation)** — `PENDING`
+- [ ] **Zero downtime deployments (multi-release, cache isolation, git automation)** — `DRAFTED`
   - Docs: https://statamic.dev/knowledge-base/tips/zero-downtime-deployments
 
 ### Performance
 
-- [ ] **Optimizing assets (stache watcher, remote disks)** — `PENDING`
+- [ ] **Optimizing assets (stache watcher, remote disks)** — `DRAFTED`
   - Docs: https://statamic.dev/knowledge-base/tips/optimizing-assets
 
-- [ ] **Caching overview** — `PENDING`
+- [ ] **Caching overview** — `DRAFTED`
   - Docs: https://statamic.dev/advanced-topics/caching
 
-- [ ] **Stache** — `PENDING`
+- [ ] **Stache** — `DRAFTED`
   - Docs: https://statamic.dev/advanced-topics/stache
 
-- [ ] **Static caching** — `PENDING`
+- [ ] **Static caching** — `DRAFTED`
   - Docs: https://statamic.dev/advanced-topics/static-caching
 
 ### Frontend / Templating
