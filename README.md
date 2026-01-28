@@ -11,18 +11,30 @@ Skill local para Clawdbot orientada a **desarrollo con Statamic 6**: busca docum
 - `skills/statamic-6-dev/references/playbook-map.md` — mapa de cobertura de docs → playbooks (estado, links canónicos, pendientes).
 - `skills/statamic-6-dev/scripts/` — scripts para actualizar y buscar en el mirror de docs.
 
-## Instalación / uso en local (Clawdbot)
+## Instalación
 
-En este repo la skill se usa en local mediante un symlink dentro del workspace de Clawdbot:
+### Laravel Boost v2
+
+Este repo incluye el formato Boost v2 bajo:
+
+- `.ai/skills/stamic-skill/`
+
+Instalación desde un proyecto:
+
+```bash
+php artisan boost:add-skill newuni/stamic-skill/.ai/skills
+```
+
+### Clawdbot (uso en local)
+
+En Clawdbot puedes usarla en local mediante un symlink dentro del workspace:
 
 ```bash
 cd /root/clawd
 ln -sfn ../projects/stamic-skill/skills/statamic-6-dev skills/stamic-skill
 ```
 
-Con eso, Clawdbot puede “ver” la skill como `stamic-skill` (y cualquier cambio que hagas en `projects/stamic-skill/...` se refleja al instante).
-
-Si no aparece, normalmente basta con reiniciar el gateway.
+Con eso, Clawdbot puede “ver” la skill como `stamic-skill`.
 
 ## Cómo usarla (prompts ejemplo)
 
