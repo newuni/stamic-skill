@@ -202,7 +202,13 @@ Next (pending):
 - [ ] Build a fieldtype — `DRAFTED` — https://statamic.dev/fieldtypes/build-a-fieldtype
 
 Next (pending):
-- [ ] Vite tooling (addons) — `PENDING` — https://statamic.dev/addons/vite-tooling
-- [ ] Building a tag — `PENDING` — https://statamic.dev/tags/building-a-tag
-- [ ] Extending modifiers — `PENDING` — https://statamic.dev/extending/modifiers
-- [ ] Widgets — `PENDING` — https://statamic.dev/widgets/all-widgets
+- [ ] Vite tooling (addons) — `DRAFTED` — https://statamic.dev/addons/vite-tooling
+- [ ] Building a tag — `DRAFTED` — https://statamic.dev/tags/building-a-tag
+- [ ] Extending modifiers — `DRAFTED` — https://statamic.dev/extending/modifiers
+- [ ] Widgets — `DRAFTED` — https://statamic.dev/widgets/all-widgets
+
+Next-next (pending):
+- [ ] Widgets: building a widget — `PENDING`
+- [ ] Utilities (addons) — `PENDING`
+- [ ] Commands (addons) — `PENDING`
+- [ ] Control Panel (addons) / Inertia pages — `PENDING`
