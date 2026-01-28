@@ -105,6 +105,38 @@ Getting Started (links only for now):
 
 ---
 
+## Phase 3 (core): Control Panel (human/website order)
+
+- [ ] **Overview** — `DRAFTED`
+  - Docs: https://statamic.dev/control-panel/overview
+
+- [ ] **Users** — `DRAFTED`
+  - Docs: https://statamic.dev/control-panel/users
+
+- [ ] **Dashboard** — `DRAFTED`
+  - Docs: https://statamic.dev/control-panel/dashboard
+
+- [ ] **Command Palette** — `DRAFTED`
+  - Docs: https://statamic.dev/control-panel/command-palette
+
+- [ ] **Preferences** — `DRAFTED`
+  - Docs: https://statamic.dev/control-panel/preferences
+
+Next (pending):
+- [ ] Permissions — `PENDING` — https://statamic.dev/control-panel/permissions
+- [ ] Multi-Site — `PENDING` — https://statamic.dev/control-panel/multi-site
+
+Links only for now:
+- [LINK_ONLY] Git Automation — https://statamic.dev/control-panel/git-automation
+- [LINK_ONLY] Live Preview — https://statamic.dev/control-panel/live-preview
+- [LINK_ONLY] Conditional Fields — https://statamic.dev/control-panel/conditional-fields
+- [LINK_ONLY] Translations — https://statamic.dev/control-panel/cp-translations
+- [LINK_ONLY] White Labeling — https://statamic.dev/control-panel/white-labeling
+- [LINK_ONLY] Elevated Sessions — https://statamic.dev/control-panel/elevated-sessions
+- [LINK_ONLY] Utilities — https://statamic.dev/control-panel/utilities
+
+---
+
 ## Later phases (not core-first, kept for reference)
 
 ### Ops / Deployment
