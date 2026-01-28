@@ -139,6 +139,24 @@ Links only for now:
 
 ---
 
+## Phase 4 (core): Frontend (human/website order)
+
+- [ ] Frontend Overview — `DRAFTED` — https://statamic.dev/frontend/overview
+- [ ] Antlers Templates — `DRAFTED` — https://statamic.dev/frontend/antlers
+- [ ] Blade Templates — `DRAFTED` — https://statamic.dev/frontend/blade
+- [ ] Views — `DRAFTED` — https://statamic.dev/frontend/views
+
+Next (pending):
+- [ ] Augmentation — `PENDING` — https://statamic.dev/frontend/augmentation
+- [ ] Assets (frontend) — `PENDING` — https://statamic.dev/frontend/assets
+- [ ] Forms (frontend) — `PENDING` — https://statamic.dev/frontend/forms
+- [ ] Content queries — `PENDING` — https://statamic.dev/frontend/content-queries
+- [ ] Search (frontend) — `PENDING` — https://statamic.dev/frontend/search
+- [ ] Image manipulation (Glide) — `PENDING` — https://statamic.dev/frontend/image-manipulation
+- [ ] Controllers — `PENDING` — https://statamic.dev/frontend/controllers
+
+---
+
 ## Later phases (not core-first, kept for reference)
 
 ### Ops / Deployment
