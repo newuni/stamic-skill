@@ -161,6 +161,9 @@ Next (pending):
 - [ ] Protecting Content — `DRAFTED` — https://statamic.dev/frontend/protecting-content
 - [ ] REST API — `DRAFTED` — https://statamic.dev/frontend/rest-api
 - [ ] GraphQL API — `DRAFTED` — https://statamic.dev/graphql
+- [ ] Customizing Markdown — `PENDING (web_fetch failing)` — https://statamic.dev/frontend/customizing-markdown
+- [ ] Blade Form Field Templates — `PENDING (web_fetch failing)` — https://statamic.dev/frontend/blade-form-field-templates
+- [ ] Frontend Advanced Topics — `PENDING (web_fetch failing)` — https://statamic.dev/frontend/advanced-topics
 
 ---
 
@@ -194,7 +197,7 @@ Advanced Topics (more):
 - [ ] YAML — `DRAFTED` — https://statamic.dev/advanced-topics/yaml
 - [ ] Lifecycle — `DRAFTED` — https://statamic.dev/advanced-topics/lifecycle
 - [ ] Debugging — `DRAFTED` — https://statamic.dev/advanced-topics/debugging
-- [ ] Sending email — `DRAFTED (page missing/404 in 6.x)` — https://statamic.dev/advanced-topics/sending-email
+- [ ] Sending email — `PENDING (web_fetch failing / page missing in 6.x)` — https://statamic.dev/advanced-topics/sending-email
 - [ ] Task scheduling — `DRAFTED` — https://statamic.dev/advanced-topics/scheduling
 - [ ] OAuth — `DRAFTED` — https://statamic.dev/advanced-topics/oauth
 - [ ] Sites API — `DRAFTED` — https://statamic.dev/advanced-topics/sites-api
