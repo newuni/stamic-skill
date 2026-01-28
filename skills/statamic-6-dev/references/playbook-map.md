@@ -123,8 +123,8 @@ Getting Started (links only for now):
   - Docs: https://statamic.dev/control-panel/preferences
 
 Next (pending):
-- [ ] Permissions — `PENDING` — https://statamic.dev/control-panel/permissions
-- [ ] Multi-Site — `PENDING` — https://statamic.dev/control-panel/multi-site
+- [ ] Permissions — `DRAFTED` — https://statamic.dev/control-panel/permissions
+- [ ] Multi-Site — `DRAFTED` — https://statamic.dev/control-panel/multi-site
 
 Links only for now:
 - [LINK_ONLY] Git Automation — https://statamic.dev/control-panel/git-automation
