@@ -151,9 +151,9 @@ Next (pending):
 - [ ] Assets (frontend) — `DRAFTED` — https://statamic.dev/frontend/assets
 - [ ] Forms (frontend) — `DRAFTED` — https://statamic.dev/frontend/forms
 - [ ] Content queries — `DRAFTED` — https://statamic.dev/frontend/content-queries
-- [ ] Search (frontend) — `PENDING` — https://statamic.dev/frontend/search
-- [ ] Image manipulation (Glide) — `PENDING` — https://statamic.dev/frontend/image-manipulation
-- [ ] Controllers — `PENDING` — https://statamic.dev/frontend/controllers
+- [ ] Search (frontend) — `DRAFTED` — https://statamic.dev/frontend/search
+- [ ] Image manipulation (Glide) — `DRAFTED` — https://statamic.dev/frontend/image-manipulation
+- [ ] Controllers — `DRAFTED` — https://statamic.dev/frontend/controllers
 
 ---
 
