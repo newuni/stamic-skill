@@ -12,32 +12,50 @@
    ```bash
    php please make:addon vendor/my-addon
    ```
-2. Ensure the addon has:
-   - `composer.json` with `extra.statamic` + `extra.laravel.providers`
-   - a service provider extending `Statamic\Providers\AddonServiceProvider`
-   - use `bootAddon()` (not `boot()`) for addon boot logic
-3. Install locally using a Composer path repository in the project root `composer.json`, then `composer update`.
-4. Register components (automatic if conventions match; otherwise via provider properties):
-   - `$tags`, `$modifiers`, `$fieldtypes`, `$widgets`, `$commands`
-5. Assets:
-   - prefer Vite tooling
-   - publish assets via `$vite`, `$scripts`, `$stylesheets`, `$publishables`
-   - control auto-publish with `$publishAfterInstall`
+2. Core structure:
+   - `composer.json` with:
+     - `extra.statamic` (so Statamic recognizes it as an addon)
+     - `extra.laravel.providers` (so Laravel auto-loads it)
+   - a Service Provider extending `Statamic\Providers\AddonServiceProvider`
+   - put boot logic in `bootAddon()` (not `boot()`) so it runs after Statamic boots
+3. Local development install (path repository):
+   - in project root `composer.json`:
+     - add to `require`: `"vendor/my-addon": "*"`
+     - add to `repositories`: `{ "type": "path", "url": "addons/vendor/my-addon" }`
+   - then run:
+     ```bash
+     composer update
+     ```
+4. Register components:
+   - many autoload by convention, but you can explicitly list them in your provider:
+     - `$tags`, `$modifiers`, `$fieldtypes`, `$widgets`, `$commands`
+5. Assets (Control Panel JS/CSS):
+   - prefer Vite tooling.
+   - publish assets via `$vite`, `$scripts`, `$stylesheets`, `$publishables`.
+   - control auto-publish after install with `$publishAfterInstall`.
 6. Routes:
-   - keep route files in `src/routes/{cp,actions,web}.php` (auto-registered)
-   - understand prefixes:
-     - CP routes: `/cp/...` + auth
-     - action routes: `/!/addon-name/...`
-     - web routes: normal Laravel web routes
+   - convention-based files auto-registered: `src/routes/{cp,actions,web}.php`
+   - prefixes/middleware:
+     - CP routes: `/cp/...` and auth applied
+     - action routes: `/!/addon-name/...` (good for frontend actions)
+     - web routes: normal Laravel web routes (no Statamic middleware by default)
 7. CP pages:
-   - use Inertia (register Vue pages with `Statamic.$inertia.register`)
-8. Settings:
-   - register a settings blueprint so users can edit addon settings in CP
-   - store settings in `resources/addons` by default
+   - build CP pages with Inertia.
+   - register pages in JS with `Statamic.$inertia.register('my-addon::Page', Component)`.
+8. Settings UI:
+   - register a settings blueprint so users can edit settings in CP.
+   - settings stored in YAML under `resources/addons` by default.
 9. Updates:
-   - ship UpdateScript classes for migrations/permission changes
+   - ship `UpdateScript` classes for migrations/changes when versions bump.
 10. Editions:
-   - define editions in `composer.json` and toggle features by edition
+   - define editions in `composer.json` and gate features by selected edition.
+
+## Quick mental model
+- **Composer** installs it.
+- **AddonServiceProvider** wires it.
+- **Vite** builds CP UI.
+- **Routes** define CP/actions/web entrypoints.
+- **Blueprint settings** make it configurable in CP.
 
 ## Pitfalls / gotchas
 - Route model binding: using params like `{entry}` may auto-resolve to Statamic objects.

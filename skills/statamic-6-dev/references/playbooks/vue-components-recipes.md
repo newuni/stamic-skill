@@ -48,18 +48,22 @@ const instance = Statamic.$components.append('publish-confirmation', {
   props: { foo: 'bar' },
 })
 
+// listen to emitted events
 instance.on('done', (payload) => {
   // ...
 })
 
-// later
+// update props
 instance.prop('foo', 'baz')
+
+// cleanup when finished / on page change
 instance.destroy()
 ```
 
 Notes:
 - You must have registered the component name ahead of time.
-- The mount point name must exist in Statamic’s CP (example shown in docs).
+- The mount point name must exist in Statamic’s CP.
+- Always `destroy()` appended components to avoid leaks / duplicate UI.
 
 ## Recipe 4: Action → JS callback (e.g. copy to clipboard)
 

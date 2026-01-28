@@ -179,7 +179,7 @@ Next (pending):
 - [ ] **Stache** — `DRAFTED`
   - Docs: https://statamic.dev/advanced-topics/stache
 
-- [ ] **Static caching** — `DRAFTED`
+- [ ] **Static caching** — `REFINED`
   - Docs: https://statamic.dev/advanced-topics/static-caching
 
 Advanced Topics (more):
@@ -202,7 +202,7 @@ Advanced Topics (more):
 ## Phase 5: Addons / Extending (initial slice)
 
 - [ ] Addons overview — `DRAFTED` — https://statamic.dev/addons/overview
-- [ ] Building an addon — `DRAFTED` — https://statamic.dev/addons/building-an-addon
+- [ ] Building an addon — `REFINED` — https://statamic.dev/addons/building-an-addon
 - [ ] Tags overview — `DRAFTED` — https://statamic.dev/tags/overview
 - [ ] Modifiers overview — `DRAFTED` — https://statamic.dev/modifiers/overview
 - [ ] Build a fieldtype — `DRAFTED` — https://statamic.dev/fieldtypes/build-a-fieldtype
@@ -239,4 +239,4 @@ Next after that (pending):
 - [ ] Repositories — `DRAFTED` — https://statamic.dev/backend-apis/repositories
 - [ ] Data retrieval and manipulation — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/data-retrieval-and-manipulation
 - [ ] Resource APIs — `DRAFTED (page stub in 6.x)` — https://statamic.dev/backend-apis/resource-apis
-- [ ] Vue components (deeper) — `DRAFTED` — (recipes + append patterns)
+- [ ] Vue components (deeper) — `REFINED` — (recipes + append patterns)
