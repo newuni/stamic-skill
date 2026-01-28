@@ -18,24 +18,24 @@ Process reference:
 
 ## Phase 1 (core): Getting Started (human/website order)
 
-- [ ] **Requirements** — `PENDING`
+- [ ] **Requirements** — `DRAFTED`
   - Docs: https://statamic.dev/getting-started/requirements
 
-- [ ] **Core Concepts** — `PENDING`
+- [ ] **Core Concepts** — `DRAFTED`
   - Docs: https://statamic.dev/getting-started/core-concepts
 
-- [ ] **Quick Start Guide** — `PENDING`
+- [ ] **Quick Start Guide** — `DRAFTED`
   - Docs: https://statamic.dev/getting-started/quick-start-guide
 
-- [ ] **Installing Statamic (overview)** — `PENDING`
+- [ ] **Installing Statamic (overview)** — `DRAFTED`
   - Docs: https://statamic.dev/getting-started/installing
 
   Sub-pages (core dev):
-  - [ ] **Installing locally** — `PENDING`
+  - [ ] **Installing locally** — `DRAFTED`
     - Docs: https://statamic.dev/getting-started/installing/local
-  - [ ] **Installing with Laravel** — `PENDING`
+  - [ ] **Installing with Laravel** — `DRAFTED`
     - Docs: https://statamic.dev/getting-started/installing/laravel
-  - [ ] **Installing with Laravel Herd** — `PENDING`
+  - [ ] **Installing with Laravel Herd** — `DRAFTED`
     - Docs: https://statamic.dev/getting-started/installing/laravel-herd
 
   Sub-pages (hosts/platforms) — `[LINK_ONLY]`:
