@@ -1,28 +1,36 @@
-# Control Panel: Translations (CP translations)
+# Control Panel: Translations
 
-**Summary:** Statamic’s Control Panel UI is translated into many languages. Configure the default locale in `config/app.php`, optionally set a fallback locale, and override per user via user preferences. Some strings fall back to Laravel/app translations.
+**Summary:** Statamic’s Control Panel ships with many languages. Set app locale/fallback in `config/app.php`, optionally override per-user locale in user preferences, and contribute new translations via statamic/cms.
 
 **When to use:**
-- You want the CP UI in a specific language.
-- You need per-user UI language preferences.
-- You need to contribute or maintain a translation.
+- CP localization for editors.
 
 ## Steps
-1. Set default locale (and fallback) in `config/app.php`:
-   - `'locale' => 'es'`
-   - `'fallback_locale' => 'en'`
-2. Override per user by setting `preferences.locale` in the user record YAML.
-3. For translations not covered by Statamic (e.g., Laravel auth/validation strings), provide translations in your app’s `resources/lang`.
-   - Consider using Laravel-lang as a starting point.
-4. Contribute a new translation (upstream):
-   - clone `statamic/cms`, install deps
-   - generate files: `php translator generate <code>`
-   - translate JSON/PHP lang files
-   - add language to CorePreferences list
-   - submit PR
+1. Set default locale and fallback in `config/app.php`:
+   ```php
+   'locale' => 'es',
+   'fallback_locale' => 'en',
+   ```
+2. Per-user override:
+   - in a user’s YAML record preferences:
+     ```yaml
+     preferences:
+       locale: en
+     ```
+3. Know what isn’t covered:
+   - some auth/validation strings come from Laravel app translations (`resources/lang`).
+   - consider copying from https://github.com/Laravel-Lang/lang.
+4. Contribute a new translation:
+   - clone `statamic/cms`, run `composer install`.
+   - generate files:
+     ```bash
+     php translator generate <code>
+     ```
+   - translate generated `lang/<code>` and `<code>.json`.
+   - add language option to `CorePreferences` list.
 
 ## Pitfalls / gotchas
-- Community translations can lag behind new Statamic releases.
+- Community translations may lag behind new releases.
 
 ## Sources
 - https://statamic.dev/control-panel/cp-translations

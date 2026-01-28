@@ -1,22 +1,31 @@
 # Control Panel: Keyboard Shortcuts
 
-**Summary:** You can add custom keyboard shortcuts in the Control Panel using the `Statamic.$keys` helper (Mousetrap-style). Bind/unbind in Vue component lifecycle to avoid leaking bindings.
+**Summary:** You can add CP keyboard shortcuts via `Statamic.$keys` (Mousetrap-like). Bind shortcuts in Vue components and destroy bindings when the component unmounts.
 
 **When to use:**
-- Building addons / CP extensions that benefit from keyboard shortcuts.
+- Improving CP UX for custom pages/components.
 
 ## Steps
-1. Bind a shortcut (use `mod` for cmd/ctrl portability):
-   - `Statamic.$keys.bind('mod+s', save)`
-2. Store the returned Binding and destroy it when the component unmounts.
-3. Use `bindGlobal` if the shortcut should work inside text inputs.
-4. Define sequences:
-   - single key (`/`)
-   - combo (`shift+/`)
-   - sequence (`up up down down`)
+1. Bind in `onMounted`, destroy in `onBeforeUnmount`:
+   ```js
+   import { ref, onMounted, onBeforeUnmount } from 'vue'
+
+   const binding = ref(null)
+
+   onMounted(() => {
+     binding.value = Statamic.$keys.bind('mod+s', save)
+   })
+
+   onBeforeUnmount(() => {
+     binding.value?.destroy()
+   })
+   ```
+2. Use `bindGlobal` if shortcut must work inside text inputs.
+3. Use `mod` for ctrl/cmd portability.
+4. Key sequences can be combos (`shift+/`) or sequences (`up up down down`).
 
 ## Pitfalls / gotchas
-- Always destroy bindings in components that may disappear (modals/stacks), so previous bindings can restore.
+- Always destroy bindings in transient UI (modals/stacks) to restore previous bindings.
 
 ## Sources
 - https://statamic.dev/control-panel/keyboard-shortcuts

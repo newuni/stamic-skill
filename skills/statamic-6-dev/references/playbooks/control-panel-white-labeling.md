@@ -1,28 +1,24 @@
 # Control Panel: White Labeling
 
-**Summary:** White labeling lets you customize Control Panel branding (name, logos, colors, favicon, custom CSS) and optionally hide doc links / set a support URL. It’s configured in `config/statamic/cp.php` (and/or env vars).
+**Summary:** White Labeling lets you customize the CP branding: CMS name, logos (including dark mode variants), favicon, custom CSS, support link, and whether to show docs links.
 
 **When to use:**
-- Delivering Statamic to a client with their branding.
-- Customizing the CP look/feel for internal use.
+- Client/internal rebranding.
 
 ## Steps
-1. Configure white label options in `config/statamic/cp.php` (or equivalent env vars).
-2. Set a custom CMS name:
+1. Configure in `config/statamic/cp.php` (or env vars):
    - `custom_cms_name`
-3. Set logo(s):
-   - `custom_logo_url` (single URL or array for nav/outside)
-   - `custom_dark_logo_url` for dark mode
-   - alternatively use `custom_logo_text`
-4. Set favicon and custom CSS:
+   - `custom_logo_url` (string or `{nav,outside}` array)
+   - `custom_dark_logo_url`
+   - `custom_logo_text`
    - `custom_favicon_url`
    - `custom_css_url`
-5. Configure support & docs links:
-   - `support_url` (or `false` to remove)
+   - `support_url` (or `false`)
    - `link_to_docs`
+2. Use different logos for navbar vs login by providing an array.
 
 ## Pitfalls / gotchas
-- License terms: you can only rebrand for personal/internal/client usage; you cannot resell Statamic under another name.
+- License: you may rebrand for personal/internal/client use, not resell Statamic as another product.
 
 ## Sources
 - https://statamic.dev/control-panel/white-labeling

@@ -1,34 +1,48 @@
 # Control Panel: Multi-Site
 
-**Summary:** Multi-site lets one Statamic install manage variations of a single site (languages/regions/domains/subdomains/subdirectories). It’s not intended for hosting many independent tenant sites. Sites are configured in `resources/sites.yaml` and enabled via `config/statamic/system.php`.
+**Summary:** Multi-site lets one Statamic install serve multiple “sites” (languages/regions/brands) with separate URLs/locales. Configure sites in `resources/sites.yaml` (or CP UI), enable multisite in `config/statamic/system.php`, and manage per-site permissions and templates.
 
 **When to use:**
-- Translations or region-specific site variants.
-- Different domains/subdomains/subpaths for the same product/site.
+- Translations.
+- Country/region variants.
+- Same codebase, multiple site variants (not multi-tenant).
 
 ## Steps
-1. If converting an existing single-site install, run:
+1. Convert an existing single-site install:
    ```bash
    php please multisite
    ```
-2. Enable multi-site:
-   - `config/statamic/system.php` → `'multisite' => true`
-3. Add sites via the CP (Sites) or edit `resources/sites.yaml`:
-   - per site: `name`, `url`, `locale`, optional `lang`, optional `attributes`
-4. Prefer explicit/absolute site URLs (often based on `{{ config:app:url }}`) and control them per environment via `APP_URL`.
-5. Be careful renaming site handles; update content folders and any configs that reference the handle.
-6. Permissions:
-   - add `access {site_handle} site` to roles as needed; site access gates CP editing.
-7. Optional: per-site views:
-   - `resources/views/<site_handle>/...` overrides root views when present.
-8. Template snippets:
-   - site switcher: loop `{{ sites }}`
-   - set `<html lang="{{ site:short_locale }}">`
-9. Enable fields for localization using the field “Localizable” (globe icon).
+2. Enable multisite:
+   - `config/statamic/system.php`:
+     ```php
+     'multisite' => true,
+     ```
+3. Define sites in `resources/sites.yaml`:
+   ```yaml
+   en:
+     name: English
+     url: '{{ config:app:url }}'
+     locale: en_US
+     lang: en
+     attributes:
+       theme: standard
+   fr:
+     name: Français
+     url: '{{ config:app:url }}/fr/'
+     locale: fr_FR
+   ```
+4. Understand site options:
+   - handle (key), name (label), url (base), locale (formatting), lang (CP language), attributes (arbitrary values)
+5. Per-site permissions:
+   - grant `access {site_handle} site` on roles.
+6. Per-site views:
+   - put view overrides in `resources/views/{site_handle}/...`.
+7. Build a site switcher using the `sites` loop.
+8. Static caching + multisite requires additional config and server rules (see static caching multisite section).
+9. Localize fields (globe icon) to edit per-site values.
 
 ## Pitfalls / gotchas
-- Not a multi-tenant feature; don’t use it to host unrelated sites.
-- Static caching in multi-site requires additional config + rewrite rules (see static caching docs).
+- Renaming a site handle requires moving content directories and updating collection configs.
 
 ## Sources
 - https://statamic.dev/control-panel/multi-site

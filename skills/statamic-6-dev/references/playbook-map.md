@@ -125,18 +125,20 @@ Getting Started (links only for now):
 Next (pending):
 - [ ] Permissions — `DRAFTED` — https://statamic.dev/control-panel/permissions
 - [ ] Multi-Site — `DRAFTED` — https://statamic.dev/control-panel/multi-site
-
-Links only for now:
-- [ ] Git Automation — `DRAFTED` — https://statamic.dev/control-panel/git-automation
-- [ ] Live Preview — `DRAFTED` — https://statamic.dev/control-panel/live-preview
-- [ ] Toast Notifications — `DRAFTED` — https://statamic.dev/control-panel/toast-notifications
 - [ ] Conditional Fields — `DRAFTED` — https://statamic.dev/control-panel/conditional-fields
 - [ ] Translations — `DRAFTED` — https://statamic.dev/control-panel/cp-translations
 - [ ] White Labeling — `DRAFTED` — https://statamic.dev/control-panel/white-labeling
 - [ ] Keyboard Shortcuts — `DRAFTED` — https://statamic.dev/control-panel/keyboard-shortcuts
 - [ ] Elevated Sessions — `DRAFTED` — https://statamic.dev/control-panel/elevated-sessions
-- [ ] Utilities — `DRAFTED` — https://statamic.dev/control-panel/utilities
 - [ ] Customizing the CP Nav — `DRAFTED` — https://statamic.dev/control-panel/customizing-the-cp-nav
+- [ ] Multi-User Collaboration — `DRAFTED` — https://statamic.dev/control-panel/multi-user-collaboration
+- [ ] Publish Forms — `DRAFTED` — https://statamic.dev/control-panel/publish-forms
+
+Also drafted:
+- [ ] Git Automation — `DRAFTED` — https://statamic.dev/control-panel/git-automation
+- [ ] Live Preview — `DRAFTED` — https://statamic.dev/control-panel/live-preview
+- [ ] Toast Notifications — `DRAFTED` — https://statamic.dev/control-panel/toast-notifications
+- [ ] Utilities — `DRAFTED` — https://statamic.dev/control-panel/utilities
 
 ---
 
