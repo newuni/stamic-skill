@@ -94,13 +94,13 @@ Getting Started (links only for now):
 - [ ] **Data Inheritance** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/data-inheritance
 
-- [ ] **Relationships** — `PENDING`
+- [ ] **Relationships** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/relationships
 
-- [ ] **Revisions** — `PENDING`
+- [ ] **Revisions** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/revisions
 
-- [ ] **Validation** — `PENDING`
+- [ ] **Validation** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/validation
 
 ---
