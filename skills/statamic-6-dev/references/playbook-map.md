@@ -127,8 +127,9 @@ Next (pending):
 - [ ] Multi-Site — `DRAFTED` — https://statamic.dev/control-panel/multi-site
 
 Links only for now:
-- [LINK_ONLY] Git Automation — https://statamic.dev/control-panel/git-automation
-- [LINK_ONLY] Live Preview — https://statamic.dev/control-panel/live-preview
+- [ ] Git Automation — `DRAFTED` — https://statamic.dev/control-panel/git-automation
+- [ ] Live Preview — `DRAFTED` — https://statamic.dev/control-panel/live-preview
+- [ ] Toast Notifications — `DRAFTED` — https://statamic.dev/control-panel/toast-notifications
 - [ ] Conditional Fields — `DRAFTED` — https://statamic.dev/control-panel/conditional-fields
 - [ ] Translations — `DRAFTED` — https://statamic.dev/control-panel/cp-translations
 - [ ] White Labeling — `DRAFTED` — https://statamic.dev/control-panel/white-labeling
