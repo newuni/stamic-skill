@@ -193,8 +193,16 @@ Next (pending):
 - [ ] **Content queries** — `PENDING`
   - Docs: https://statamic.dev/frontend/content-queries
 
-### Addons / Extensibility
+## Phase 5: Addons / Extending (initial slice)
 
-- [ ] **Addons overview + building** — `PENDING`
-  - Docs: https://statamic.dev/addons/overview
-  - Docs: https://statamic.dev/addons/building-an-addon
+- [ ] Addons overview — `DRAFTED` — https://statamic.dev/addons/overview
+- [ ] Building an addon — `DRAFTED` — https://statamic.dev/addons/building-an-addon
+- [ ] Tags overview — `DRAFTED` — https://statamic.dev/tags/overview
+- [ ] Modifiers overview — `DRAFTED` — https://statamic.dev/modifiers/overview
+- [ ] Build a fieldtype — `DRAFTED` — https://statamic.dev/fieldtypes/build-a-fieldtype
+
+Next (pending):
+- [ ] Vite tooling (addons) — `PENDING` — https://statamic.dev/addons/vite-tooling
+- [ ] Building a tag — `PENDING` — https://statamic.dev/tags/building-a-tag
+- [ ] Extending modifiers — `PENDING` — https://statamic.dev/extending/modifiers
+- [ ] Widgets — `PENDING` — https://statamic.dev/widgets/all-widgets
