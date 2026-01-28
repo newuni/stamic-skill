@@ -47,6 +47,7 @@ Provide Statamic 6 documentation-backed guidance and implementation help, optimi
 
 ### references/
 - `references/sources.md`: canonical sources and how to treat them.
+- `references/statamic-mcp-notes.md`: lightweight domain taxonomy + response checklist inspired by statamic-mcp.
 
 ### scripts/
 Use these scripts when you need deterministic, repeatable doc lookup.
