@@ -129,8 +129,8 @@ Next (pending):
 Links only for now:
 - [LINK_ONLY] Git Automation — https://statamic.dev/control-panel/git-automation
 - [LINK_ONLY] Live Preview — https://statamic.dev/control-panel/live-preview
-- [LINK_ONLY] Conditional Fields — https://statamic.dev/control-panel/conditional-fields
-- [LINK_ONLY] Translations — https://statamic.dev/control-panel/cp-translations
+- [ ] Conditional Fields — `DRAFTED` — https://statamic.dev/control-panel/conditional-fields
+- [ ] Translations — `DRAFTED` — https://statamic.dev/control-panel/cp-translations
 - [LINK_ONLY] White Labeling — https://statamic.dev/control-panel/white-labeling
 - [LINK_ONLY] Elevated Sessions — https://statamic.dev/control-panel/elevated-sessions
 - [LINK_ONLY] Utilities — https://statamic.dev/control-panel/utilities
