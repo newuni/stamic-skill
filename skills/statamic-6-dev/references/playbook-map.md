@@ -139,21 +139,26 @@ Also drafted:
 - [ ] Live Preview — `DRAFTED` — https://statamic.dev/control-panel/live-preview
 - [ ] Toast Notifications — `DRAFTED` — https://statamic.dev/control-panel/toast-notifications
 - [ ] Utilities — `DRAFTED` — https://statamic.dev/control-panel/utilities
+- [ ] Routing (CP) — `REFINED` — https://statamic.dev/control-panel/routing
+- [ ] Field Actions — `REFINED` — https://statamic.dev/control-panel/field-actions
+
+Extending:
+- [ ] CP Navigation — `REFINED` — https://statamic.dev/extending/cp-navigation
 
 ---
 
 ## Phase 4 (core): Frontend (human/website order)
 
 - [ ] Frontend Overview — `DRAFTED` — https://statamic.dev/frontend/overview
-- [ ] Antlers Templates — `DRAFTED` — https://statamic.dev/frontend/antlers
-- [ ] Blade Templates — `DRAFTED` — https://statamic.dev/frontend/blade
-- [ ] Views — `DRAFTED` — https://statamic.dev/frontend/views
+- [ ] Antlers Templates — `REFINED` — https://statamic.dev/frontend/antlers
+- [ ] Blade Templates — `REFINED` — https://statamic.dev/frontend/blade
+- [ ] Views — `REFINED` — https://statamic.dev/frontend/views
 
 Next (pending):
-- [ ] Augmentation — `DRAFTED` — https://statamic.dev/frontend/augmentation
-- [ ] Assets (frontend) — `DRAFTED` — https://statamic.dev/frontend/assets
-- [ ] Forms (frontend) — `DRAFTED` — https://statamic.dev/frontend/forms
-- [ ] Content queries — `DRAFTED` — https://statamic.dev/frontend/content-queries
+- [ ] Augmentation — `REFINED` — https://statamic.dev/frontend/augmentation
+- [ ] Assets (frontend) — `REFINED` — https://statamic.dev/frontend/assets
+- [ ] Forms (frontend) — `REFINED` — https://statamic.dev/frontend/forms
+- [ ] Content queries — `REFINED` — https://statamic.dev/frontend/content-queries
 - [ ] Search (frontend) — `DRAFTED` — https://statamic.dev/frontend/search
 - [ ] Image manipulation (Glide) — `DRAFTED` — https://statamic.dev/frontend/image-manipulation
 - [ ] Controllers — `DRAFTED` — https://statamic.dev/frontend/controllers
@@ -161,9 +166,10 @@ Next (pending):
 - [ ] Protecting Content — `DRAFTED` — https://statamic.dev/frontend/protecting-content
 - [ ] REST API — `DRAFTED` — https://statamic.dev/frontend/rest-api
 - [ ] GraphQL API — `DRAFTED` — https://statamic.dev/graphql
-- [ ] Customizing Markdown — `PENDING (web_fetch failing)` — https://statamic.dev/frontend/customizing-markdown
-- [ ] Blade Form Field Templates — `PENDING (web_fetch failing)` — https://statamic.dev/frontend/blade-form-field-templates
-- [ ] Frontend Advanced Topics — `PENDING (web_fetch failing)` — https://statamic.dev/frontend/advanced-topics
+- [ ] Front-End Frameworks — `REFINED` — https://statamic.dev/frontend/javascript-frameworks
+- [ ] Customizing Markdown — `REFINED` — https://statamic.dev/frontend/markdown
+- [ ] Blade Form Field Templates — `REFINED` — https://statamic.dev/frontend/blade-form-fields
+- [ ] Frontend Advanced Topics — `PENDING (page missing/removed in 6.x; /frontend/advanced-topics returns 404)` — https://statamic.dev/frontend/advanced-topics
 
 ---
 

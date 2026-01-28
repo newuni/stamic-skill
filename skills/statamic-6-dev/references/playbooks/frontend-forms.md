@@ -1,45 +1,49 @@
 # Frontend: Forms
 
-**Summary:** Statamic Forms provide end-to-end form handling: define a form (settings), define a blueprint (fields + validation), render the form with tags (dynamic rendering is available), store submissions, export submissions, and optionally send emails/attachments and handle uploads.
+**Summary:** Statamic forms are defined via a form config + a blueprint, store submissions, can email notifications, support file uploads, honeypot spam prevention, AJAX, and Laravel Precognition integration.
 
 **When to use:**
-- Building contact/newsletter/job application forms.
-- Handling submissions + exporting.
-- Sending notifications on submission.
+- Contact forms, registrations, multi-step-ish custom flows.
 
 ## Steps
-1. Create a form:
-   - CP: `/cp/forms` → Create Form
-   - or create YAML in `resources/forms/<handle>.yaml`
-2. Define the form blueprint:
-   - `resources/blueprints/forms/<handle>.yaml`
-   - add fields + validation rules
-   - avoid reserved handle `message` if using email feature
-3. Render a form in templates:
-   - use `{{ form:<handle> }}` / `{{ form:create }}` patterns
-   - handle success/errors
-   - loop `{{ fields }}` to render dynamic field HTML
-   - include honeypot field (custom name possible)
-4. View and export submissions in CP.
-5. Configure exporters in `config/statamic/forms.php` (csv/json or custom).
-6. Configure email notifications in the form config:
-   - support multiple emails per submission
-   - dynamic `to`, `reply_to`, and `subject` using variables
-   - enable `attachments: true` for assets uploads
-   - optional Laravel markdown mailables
-7. Handle uploads:
-   - use `assets` field to store uploads in a container
-   - use `files` field to attach and delete after email
-8. Static caching:
-   - exclude the page from caching or wrap the form in `{{ nocache }}` so success/errors show after submit.
+1. Create a form in CP (`/cp/forms`) or YAML under `resources/forms/{handle}.yaml`.
+2. Define fields + validation in `resources/blueprints/forms/{handle}.yaml`.
+   - avoid using `message` handle if you use form email config (Laravel reserved in that context).
+3. Render the form with tags:
+   ```antlers
+   {{ form:contact }}
+     {{ if success }}{{ success }}{{ /if }}
+     {{ if errors }}{{ errors }}{{ value }}{{ /errors }}{{ /if }}
+     {{ fields }}
+       <label>{{ display }}</label>
+       {{ field }}
+       {{ if error }}{{ error }}{{ /if }}
+     {{ /fields }}
+     <input type="text" class="hidden" name="{{ honeypot ?? 'honeypot' }}">
+     <button type="submit">Submit</button>
+   {{ /form:contact }}
+   ```
+4. View submissions in CP; render submissions using `form:submissions`.
+5. Export submissions (CSV/JSON) via exporters in `config/statamic/forms.php`.
+6. Emails:
+   - add `email:` blocks to the form config; can use auto email or custom `html`/`text` views.
+   - can set to/reply_to/subject dynamically using Antlers variables.
+   - attachments: `attachments: true` to attach uploaded assets.
+7. File uploads:
+   - use `assets` fieldtype to store uploads as assets (container required).
+   - use `files` fieldtype for ephemeral uploads (attach then delete).
+   - for multiple files, use `name="files[]"` + `multiple`.
+8. Honeypot:
+   - add a hidden field; configure custom honeypot name in form config if desired.
 9. AJAX:
-   - include `_token` and `_params`
-   - set `X-Requested-With: XMLHttpRequest`
-10. Optional: Precognition for live validation (Alpine example).
+   - include `_token` and `_params`; set `X-Requested-With: XMLHttpRequest`.
+10. Static caching:
+   - wrap forms in `nocache` or exclude page from static cache.
+11. Precognition:
+   - supported with `js="alpine_precognition"` and Alpine examples.
 
 ## Pitfalls / gotchas
-- Static caching will hide post-submit states unless you use `nocache` or exclusions.
-- Uploadable extensions are restricted by Statamic assets config.
+- If a page is statically cached, you must use `nocache` around the form or exclude that URL.
 
 ## Sources
 - https://statamic.dev/frontend/forms

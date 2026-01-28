@@ -1,31 +1,30 @@
-# Frontend: Views (layouts, templates, partials)
+# Frontend: Views (Layouts, Templates, Partials)
 
-**Summary:** Views live in `resources/views/`. Layouts wrap templates via `{{ template_content }}` (Antlers). Templates render per-page content. Partials are reusable snippets included via the `partial` tag. Blade views (`.blade.php`) are rendered by Laravel’s Blade engine.
+**Summary:** Frontend views live in `resources/views`. Statamic combines a **template** into a **layout** at `{{ template_content }}`. Partials are reusable views included with the `partial` tag.
 
 **When to use:**
-- Organizing templates and deciding conventions.
-- Understanding how layout/template/partial composition works.
+- Structuring Antlers/Blade views cleanly.
 
 ## Steps
-1. Create views in `resources/views/`.
-2. Layouts:
-   - default is `resources/views/layout.antlers.html`
-   - set injection point with `{{ template_content }}`
-   - entries can override layout via `layout: <name>`
-   - default layout can be configured in `config/statamic/system.php` (`layout`)
-3. Templates:
-   - entries can set `template: <name>`
-   - use `template: '@blueprint'` on a collection to map to `resources/views/{collection}/{blueprint}.antlers.html`
-4. Partials:
-   - include with `{{ partial:blog/card }}`
-   - convention: prefix partial filenames with `_` and omit it in the partial tag.
-5. Blade views:
-   - `.blade.php` uses Blade; same data is injected
-   - but you don’t have Statamic tags in Blade (use Antlers Blade Components / `@antlers` when needed)
-6. Choose an organization style (flat / by type / by section) and stick to it.
+1. Layout:
+   - default: `resources/views/layout.antlers.html`
+   - insert template output with `{{ template_content }}`.
+   - change default in `config/statamic/system.php` (`layout`).
+2. Template:
+   - entry can set `template: gallery` (maps to `gallery.antlers.html`).
+   - set collection template to `@blueprint` to map by blueprint:
+     `resources/views/{collection}/{blueprint}.antlers.html`.
+3. Partials:
+   - include with `{{ partial:blog/card }}` (maps to `_card.antlers.html`).
+   - convention: prefix partial files with `_`.
+4. Blade views:
+   - name files `*.blade.php`.
+   - data is available, but Statamic tags aren’t.
+5. Organizing conventions:
+   - flat (small sites), by type (partials/layouts/templates), or by section.
 
 ## Pitfalls / gotchas
-- If you use Blade templates, remember layout injection rules differ from Antlers.
+- Layout/template injection rule differs when the template is Blade: Blade template ignores Statamic layout and you should use Blade’s `@extends`.
 
 ## Sources
 - https://statamic.dev/frontend/views

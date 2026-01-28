@@ -1,38 +1,40 @@
 # Frontend: Assets
 
-**Summary:** Assets are files (images/videos/PDFs/etc.) managed via containers (local/S3/etc.). Statamic caches asset metadata in `.meta` YAML files and exposes assets on the frontend via fieldtypes and tags, with optional image manipulation via Glide.
+**Summary:** Assets are files (images, PDFs, etc.) managed via asset containers (local disk or remote like S3). Statamic caches asset metadata in `.meta/*.yaml` files and can attach blueprint fields (alt text, focal point, etc.) to assets.
 
 **When to use:**
-- Building image galleries/downloads/media components.
-- Debugging asset URLs/visibility/metadata.
-- Choosing between selecting assets (fieldtype) vs listing assets (tag).
+- Implementing image galleries/downloads.
+- Managing metadata like alt/focus.
+- Performance tuning for large/remote asset stores.
 
 ## Steps
-1. Define/configure asset containers (typically in CP) and understand storage:
-   - container config: `content/assets/<handle>.yaml`
-   - disk config: `config/filesystems.php`
-2. Understand metadata:
-   - `.meta/<file>.yaml` caches dimensions, filesize, etc.
-   - may also store author-entered data (alt, focus, etc.) via the container blueprint
-   - consider version-controlling `.meta` if alt/focal points matter
-3. Choose frontend usage pattern:
-   - **Assets fieldtype**: editors select assets on entries/terms/globals/users; templates loop through Asset objects.
-   - **Assets tag**: list assets from a container/folder without manual selection.
-4. Image transforms:
-   - use Glide tag for resizing/cropping/filters.
-5. Private containers:
-   - place outside webroot
-   - omit disk `url` and set visibility to private
-6. Security/perms:
-   - uploads restricted by extension; add to `config/statamic/assets.php` as needed
-   - SVGs are sanitized on upload (configurable)
-7. Caching:
-   - consider custom cache stores for asset metadata/folder listing if `php artisan cache:clear` is disruptive
-   - clear asset caches via `php please assets:clear-cache`
+1. Define asset containers (CP) → stored as YAML under `content/assets/*.yaml`.
+2. Configure the underlying Laravel filesystem disk in `config/filesystems.php`.
+3. Understand metadata storage:
+   - `.meta/<asset>.yaml` stores cached + user data.
+   - consider version controlling `.meta` if you care about alt/focus.
+4. Private containers:
+   - locate disk root outside webroot
+   - omit `url` on disk to avoid direct URLs
+   - set visibility to `private`.
+5. Use on the frontend:
+   - **Assets fieldtype** (selected assets on entries):
+     ```antlers
+     {{ slideshow }}<img src="{{ url }}" alt="{{ alt }}">{{ /slideshow }}
+     ```
+   - **Assets tag** (query assets in a container/folder):
+     `{{ assets container="photos" limit="10" }}`
+6. Image manipulation:
+   - use Glide / `glide` tag (see image manipulation playbook).
+7. Upload security:
+   - allow extra extensions in `config/statamic/assets.php` (`additional_uploadable_extensions`).
+   - SVGs are sanitized by default; can disable if you trust users.
+8. Cache stores:
+   - optionally configure `asset_meta` and `asset_container_contents` cache stores in `config/cache.php`.
+   - clear via `php please assets:clear-cache`.
 
 ## Pitfalls / gotchas
-- If a disk has no `url`, Statamic won’t output URLs.
-- Leaving a “private” disk under webroot still exposes files directly.
+- Putting “private” assets inside webroot still makes them accessible if URL is known.
 
 ## Sources
 - https://statamic.dev/frontend/assets
