@@ -229,6 +229,8 @@ Next (pending):
 - [ ] Progress — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/progress
 
 Next after that (pending):
-- [ ] Query scopes & filters — `PENDING`
-- [ ] Repositories / data retrieval & manipulation — `PENDING`
+- [ ] Query scopes & filters — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/query-scopes-filters
+- [ ] Repositories — `DRAFTED` — https://statamic.dev/backend-apis/repositories
+- [ ] Data retrieval and manipulation — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/data-retrieval-and-manipulation
+- [ ] Resource APIs — `DRAFTED (page stub in 6.x)` — https://statamic.dev/backend-apis/resource-apis
 - [ ] Vue components (deeper) — `PENDING`
