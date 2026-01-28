@@ -131,9 +131,11 @@ Links only for now:
 - [LINK_ONLY] Live Preview — https://statamic.dev/control-panel/live-preview
 - [ ] Conditional Fields — `DRAFTED` — https://statamic.dev/control-panel/conditional-fields
 - [ ] Translations — `DRAFTED` — https://statamic.dev/control-panel/cp-translations
-- [LINK_ONLY] White Labeling — https://statamic.dev/control-panel/white-labeling
-- [LINK_ONLY] Elevated Sessions — https://statamic.dev/control-panel/elevated-sessions
-- [LINK_ONLY] Utilities — https://statamic.dev/control-panel/utilities
+- [ ] White Labeling — `DRAFTED` — https://statamic.dev/control-panel/white-labeling
+- [ ] Keyboard Shortcuts — `DRAFTED` — https://statamic.dev/control-panel/keyboard-shortcuts
+- [ ] Elevated Sessions — `DRAFTED` — https://statamic.dev/control-panel/elevated-sessions
+- [ ] Utilities — `DRAFTED` — https://statamic.dev/control-panel/utilities
+- [ ] Customizing the CP Nav — `DRAFTED` — https://statamic.dev/control-panel/customizing-the-cp-nav
 
 ---
 
