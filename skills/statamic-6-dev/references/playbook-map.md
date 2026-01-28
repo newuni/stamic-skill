@@ -45,7 +45,7 @@ Process reference:
   - https://statamic.dev/getting-started/installing/linode
   - https://statamic.dev/getting-started/installing/laravel-forge-1-click
 
-- [ ] **Configuration** — `PENDING`
+- [ ] **Configuration** — `DRAFTED`
   - Docs: https://statamic.dev/getting-started/configuration
 
 Getting Started (links only for now):
@@ -58,10 +58,10 @@ Getting Started (links only for now):
 
 ## Phase 2 (core): Content Modeling (human/website order)
 
-- [ ] **Overview** — `PENDING`
+- [ ] **Overview** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/overview
 
-- [ ] **Collections** — `PENDING`
+- [ ] **Collections** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/collections
 
 - [ ] **Taxonomies** — `PENDING`
