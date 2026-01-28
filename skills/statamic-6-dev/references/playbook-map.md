@@ -183,10 +183,14 @@ Next (pending):
   - Docs: https://statamic.dev/advanced-topics/static-caching
 
 Advanced Topics (more):
+- [ ] CLI — `DRAFTED` — https://statamic.dev/cli
+- [ ] YAML — `DRAFTED` — https://statamic.dev/advanced-topics/yaml
+- [ ] Lifecycle — `DRAFTED` — https://statamic.dev/advanced-topics/lifecycle
 - [ ] Debugging — `DRAFTED` — https://statamic.dev/advanced-topics/debugging
-- [ ] OAuth — `DRAFTED` — https://statamic.dev/advanced-topics/oauth
-- [ ] Task scheduling — `DRAFTED (page missing/404 in 6.x)` — https://statamic.dev/advanced-topics/task-scheduling
 - [ ] Sending email — `DRAFTED (page missing/404 in 6.x)` — https://statamic.dev/advanced-topics/sending-email
+- [ ] Task scheduling — `DRAFTED` — https://statamic.dev/advanced-topics/scheduling
+- [ ] OAuth — `DRAFTED` — https://statamic.dev/advanced-topics/oauth
+- [ ] Sites API — `DRAFTED` — https://statamic.dev/advanced-topics/sites-api
 
 ### Frontend / Templating
 
