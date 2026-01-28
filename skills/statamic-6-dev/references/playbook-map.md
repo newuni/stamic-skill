@@ -215,7 +215,15 @@ Next-next (pending):
 - [ ] Testing (addons) — `DRAFTED` — https://statamic.dev/addons/testing
 
 Next-next-next (pending):
-- [ ] Actions (addons) — `PENDING`
-- [ ] Hooks — `PENDING`
-- [ ] Events — `PENDING`
-- [ ] Vue components / UI components (extending) — `PENDING`
+- [ ] Actions — `DRAFTED` — https://statamic.dev/backend-apis/actions
+- [ ] Hooks — `DRAFTED` — https://statamic.dev/backend-apis/hooks
+- [ ] Events — `DRAFTED` — https://statamic.dev/backend-apis/events
+- [ ] Vue components — `DRAFTED` — https://statamic.dev/vue-components/overview
+- [ ] UI components — `DRAFTED` — https://ui.statamic.dev
+
+Next (pending):
+- [ ] Blink cache — `PENDING` — https://statamic.dev/backend-apis/blink-cache
+- [ ] Event bus — `PENDING` — https://statamic.dev/backend-apis/event-bus
+- [ ] Dirty state tracking — `PENDING` — https://statamic.dev/backend-apis/dirty-state-tracking
+- [ ] Slugs — `PENDING` — https://statamic.dev/backend-apis/slugs
+- [ ] Progress — `PENDING` — https://statamic.dev/backend-apis/progress
