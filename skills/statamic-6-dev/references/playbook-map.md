@@ -79,19 +79,19 @@ Getting Started (links only for now):
 - [ ] **Blueprints** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/blueprints
 
-- [ ] **Fieldsets** — `PENDING`
+- [ ] **Fieldsets** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/fieldsets
 
-- [ ] **Fields** — `PENDING`
+- [ ] **Fields** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/fields
 
-- [ ] **Structures** — `PENDING`
+- [ ] **Structures** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/structures
 
-- [ ] **Computed Values** — `PENDING`
+- [ ] **Computed Values** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/computed-values
 
-- [ ] **Data Inheritance** — `PENDING`
+- [ ] **Data Inheritance** — `DRAFTED`
   - Docs: https://statamic.dev/content-modeling/data-inheritance
 
 - [ ] **Relationships** — `PENDING`
