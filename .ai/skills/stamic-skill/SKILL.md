@@ -7,6 +7,8 @@ description: Statamic 6 development skill: documentation-backed guidance from st
 
 Skill para desarrollo con **Statamic 6**. Prioriza `statamic.dev` y usa el mirror `statamic/docs` para búsquedas rápidas. Responde con pasos accionables, snippets mínimos, pitfalls y enlaces citados.
 
+> Nota: esta carpeta (`.ai/skills/stamic-skill/`) es el formato recomendado para **Laravel Boost v2**.
+
 ## Workflow (recommended)
 
 1. **Clarify target + context**
@@ -55,12 +57,12 @@ Use these scripts when you need deterministic, repeatable doc lookup.
 
 1) Update local docs mirror:
 ```bash
-./skills/statamic-6-dev/scripts/update_statamic_docs.sh
+./scripts/update_statamic_docs.sh
 ```
 
 2) Search locally:
 ```bash
-./skills/statamic-6-dev/scripts/search_statamic_docs.sh "your query"
+./scripts/search_statamic_docs.sh "your query"
 ```
 
 If the query is broad, narrow it with ripgrep flags:

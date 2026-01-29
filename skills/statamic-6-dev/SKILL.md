@@ -1,9 +1,9 @@
 ---
-name: statamic-6-dev
-description: Statamic 6 development assistant skill focused on retrieving the most up-to-date Statamic documentation and best practices from statamic.dev and the statamic/docs GitHub mirror, then applying them in real code changes (blueprints, collections, entries, Antlers, tags, addons). Use when working on a Statamic 6 project and you need authoritative doc lookup, version-aware guidance, or to coordinate Statamic-specific guidance alongside Laravel Boost (Laravel-side tooling) for a complete workflow.
+name: stamic-skill
+description: Statamic 6 development skill: documentation-backed guidance from statamic.dev + the statamic/docs mirror, with actionable steps/snippets for blueprints, Antlers, tags, addons, CP, caching, and common workflows.
 ---
 
-# Statamic 6 Dev
+# stamic-skill (Statamic 6 Dev)
 
 Provide Statamic 6 documentation-backed guidance and implementation help, optimized for developer workflows.
 
@@ -54,12 +54,12 @@ Use these scripts when you need deterministic, repeatable doc lookup.
 
 1) Update local docs mirror:
 ```bash
-./skills/statamic-6-dev/scripts/update_statamic_docs.sh
+./scripts/update_statamic_docs.sh
 ```
 
 2) Search locally:
 ```bash
-./skills/statamic-6-dev/scripts/search_statamic_docs.sh "your query"
+./scripts/search_statamic_docs.sh "your query"
 ```
 
 If the query is broad, narrow it with ripgrep flags:

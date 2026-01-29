@@ -1,6 +1,6 @@
 # stamic-skill (Statamic 6 Dev)
 
-Skill de Clawdbot para desarrollo con **Statamic 6**.
+Skill (formato legacy para Clawdbot) para desarrollo con **Statamic 6**.
 
 - Archivo principal: `SKILL.md`
 - Playbooks: `references/playbooks/`
