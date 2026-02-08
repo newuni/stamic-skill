@@ -25,4 +25,10 @@ fi
 
 shift || true
 
-rg --hidden --glob '!.git/*' "$QUERY" "$DOCS_DIR" "$@"
+if command -v rg >/dev/null 2>&1; then
+  rg --hidden --glob '!.git/*' "$QUERY" "$DOCS_DIR" "$@"
+else
+  echo "[warn] ripgrep (rg) not found; falling back to grep -R. Install rg for faster/better search."
+  # Basic fallback (no extra rg args support).
+  grep -RIn --exclude-dir=.git -- "$QUERY" "$DOCS_DIR"
+fi
