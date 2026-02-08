@@ -1,6 +1,10 @@
 ---
 name: stamic-skill
-description: Statamic 6 development skill: documentation-backed guidance from statamic.dev + the statamic/docs mirror, with actionable steps/snippets for blueprints, Antlers, tags, addons, CP, caching, and common workflows.
+description: Statamic 6 development skill with documentation-backed guidance from statamic.dev + the statamic/docs mirror. Includes actionable steps/snippets for blueprints, Antlers, tags, addons, CP, caching, and common workflows.
+license: MIT
+metadata:
+  author: newuni
+  version: "1.0.1"
 ---
 
 # stamic-skill (Statamic 6 Dev)

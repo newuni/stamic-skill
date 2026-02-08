@@ -1,6 +1,10 @@
 ---
 name: stamic-skill
-description: Statamic 6 development skill: documentation-backed guidance from statamic.dev + the statamic/docs mirror, with actionable steps/snippets for blueprints, Antlers, tags, addons, CP, caching, and common workflows. Designed to complement Laravel Boost v2 skills (Laravel-side) by handling Statamic-specific concepts.
+description: Statamic 6 development skill with documentation-backed guidance from statamic.dev + the statamic/docs mirror. Designed to complement Laravel Boost v2 by handling Statamic-specific concepts.
+license: MIT
+metadata:
+  author: newuni
+  version: "1.0.1"
 ---
 
 # stamic-skill (Statamic 6 Dev)
