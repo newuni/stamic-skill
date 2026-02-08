@@ -42,6 +42,28 @@ Eso instalará `stamic-skill` como skill local dentro del proyecto.
 - Vuelve a ejecutar `boost:add-skill` (Boost v2 hace sync de skills).
 - Si usas overrides en el proyecto, revisa la sección de overrides de Boost v2.
 
+### Codex (OpenAI) vía `npx skills`
+
+Si no quieres depender de Boost (o si `boost:add-skill` falla por red), puedes instalar la skill directamente en **Codex** usando el instalador estándar del ecosistema: [`skills` (Vercel)](https://github.com/vercel-labs/skills).
+
+**Listar skills disponibles en el repo:**
+
+```bash
+npx skills add newuni/stamic-skill --list
+```
+
+**Instalar la skill para Codex (recomendado global):**
+
+```bash
+npx skills add newuni/stamic-skill --skill stamic-skill --agent codex -g -y
+```
+
+- `--agent codex`: instala / enlaza la skill para Codex.
+- `-g` / `--global`: instala en la configuración global del usuario (no solo en el proyecto actual).
+- `-y` / `--yes`: evita prompts.
+
+> Nota: Codex suele cargar skills desde `~/.codex/skills` (o desde `CODEX_HOME` si lo tienes definido). El comando anterior se encarga de colocarlo donde toca.
+
 ### Clawdbot (uso en local)
 
 En Clawdbot puedes usarla en local mediante un symlink dentro del workspace:
@@ -51,7 +73,7 @@ cd /root/clawd
 # opción recomendada (apunta al formato Boost, mismo contenido)
 ln -sfn ../projects/stamic-skill/.ai/skills/stamic-skill skills/stamic-skill
 
-# opción legacy (mantiene la ruta histórica)
+# opción legacy
 # ln -sfn ../projects/stamic-skill/skills/stamic-skill skills/stamic-skill
 ```
 
