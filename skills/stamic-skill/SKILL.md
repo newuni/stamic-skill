@@ -64,5 +64,5 @@ Use these scripts when you need deterministic, repeatable doc lookup.
 
 If the query is broad, narrow it with ripgrep flags:
 ```bash
-./skills/statamic-6-dev/scripts/search_statamic_docs.sh "antlers" -- -n --glob '!**/README.md'
+./skills/stamic-skill/scripts/search_statamic_docs.sh "antlers" -- -n --glob '!**/README.md'
 ```

@@ -3,15 +3,17 @@
 Skill local para Clawdbot orientada a **desarrollo con Statamic 6**: busca documentación oficial (statamic.dev + mirror `statamic/docs`) y responde con pasos accionables, citas y snippets.
 
 > Nota: para **Laravel Boost v2**, el *skill key* y el `name:` del `SKILL.md` son **`stamic-skill`**.
-> 
-> Para compatibilidad con el entorno anterior de Clawdbot, también existe la carpeta histórica `skills/statamic-6-dev/` (mismo contenido, distinta ruta).
+>
+> Este repo mantiene **dos formatos** con el mismo contenido:
+> - Boost v2: `.ai/skills/stamic-skill/` (recomendado)
+> - Formato “legacy”/workspace: `skills/stamic-skill/` (para symlink en Clawdbot u otros runners)
 
 ## Qué incluye
 
-- `skills/statamic-6-dev/SKILL.md` — instrucciones de uso y workflow de la skill.
-- `skills/statamic-6-dev/references/playbooks/` — playbooks cortos y accionables por tema (Control Panel, Frontend, Addons, Advanced Topics…).
-- `skills/statamic-6-dev/references/playbook-map.md` — mapa de cobertura de docs → playbooks (estado, links canónicos, pendientes).
-- `skills/statamic-6-dev/scripts/` — scripts para actualizar y buscar en el mirror de docs.
+- `skills/stamic-skill/SKILL.md` — instrucciones de uso y workflow de la skill.
+- `skills/stamic-skill/references/playbooks/` — playbooks cortos y accionables por tema (Control Panel, Frontend, Addons, Advanced Topics…).
+- `skills/stamic-skill/references/playbook-map.md` — mapa de cobertura de docs → playbooks (estado, links canónicos, pendientes).
+- `skills/stamic-skill/scripts/` — scripts para actualizar y buscar en el mirror de docs.
 
 ## Instalación
 
@@ -50,7 +52,7 @@ cd /root/clawd
 ln -sfn ../projects/stamic-skill/.ai/skills/stamic-skill skills/stamic-skill
 
 # opción legacy (mantiene la ruta histórica)
-# ln -sfn ../projects/stamic-skill/skills/statamic-6-dev skills/stamic-skill
+# ln -sfn ../projects/stamic-skill/skills/stamic-skill skills/stamic-skill
 ```
 
 Con eso, Clawdbot puede “ver” la skill como `stamic-skill`.
@@ -73,7 +75,7 @@ Con eso, Clawdbot puede “ver” la skill como `stamic-skill`.
 Los playbooks viven en:
 
 ```
-skills/statamic-6-dev/references/playbooks/
+skills/stamic-skill/references/playbooks/
 ```
 
 Son documentos pequeños (idealmente 1 pantalla) con:
@@ -84,20 +86,20 @@ Son documentos pequeños (idealmente 1 pantalla) con:
 
 El estado y cobertura se controla en:
 
-- `skills/statamic-6-dev/references/playbook-map.md`
+- `skills/stamic-skill/references/playbook-map.md`
 
 ## Actualizar y buscar docs (mirror)
 
 Actualizar el mirror local del repositorio `statamic/docs`:
 
 ```bash
-./skills/statamic-6-dev/scripts/update_statamic_docs.sh
+./skills/stamic-skill/scripts/update_statamic_docs.sh
 ```
 
 Buscar en el mirror:
 
 ```bash
-./skills/statamic-6-dev/scripts/search_statamic_docs.sh "your query"
+./skills/stamic-skill/scripts/search_statamic_docs.sh "your query"
 ```
 
 ## Notas / decisiones

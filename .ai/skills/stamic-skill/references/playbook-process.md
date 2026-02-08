@@ -11,7 +11,7 @@ Goal: consistently convert Statamic documentation into small, reusable playbooks
 ## Output
 
 Create one file per playbook:
-- Path: `skills/statamic-6-dev/references/playbooks/<slug>.md`
+- Path: `skills/stamic-skill/references/playbooks/<slug>.md`
 - Keep each playbook short and task-oriented.
 
 Update status in `references/playbook-map.md`:
