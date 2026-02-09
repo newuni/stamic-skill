@@ -236,6 +236,14 @@ Advanced Topics (more):
 - [ ] **Content queries** — `PENDING`
   - Docs: https://statamic.dev/frontend/content-queries
 
+- [ ] **Meta: Tags / Modifiers / Fieldtypes / Variables** — `DRAFTED`
+  - Playbook: `references/playbooks/frontend-tags-modifiers-fieldtypes-variables-meta.md`
+  - Roots:
+    - Tags: https://statamic.dev/tags/overview | https://statamic.dev/tags/all-tags
+    - Modifiers: https://statamic.dev/modifiers/overview | https://statamic.dev/modifiers/all-modifiers
+    - Fieldtypes: https://statamic.dev/fieldtypes/overview | https://statamic.dev/fieldtypes/all-fieldtypes
+    - Variables: https://statamic.dev/variables/all-variables
+
 ## Phase 5: Addons / Extending (initial slice)
 
 - [ ] Addons overview — `DRAFTED` — https://statamic.dev/addons/overview
