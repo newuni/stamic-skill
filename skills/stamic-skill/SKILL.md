@@ -4,7 +4,7 @@ description: Statamic 6 development skill with documentation-backed guidance fro
 license: MIT
 metadata:
   author: newuni
-  version: "1.0.5"
+  version: "1.0.6"
 ---
 
 # stamic-skill (Statamic 6 Dev)
@@ -21,6 +21,9 @@ Provide Statamic 6 documentation-backed guidance and implementation help, optimi
      ```bash
      ./scripts/update_statamic_docs.sh
      ```
+   - If you need parallel searches, do this:
+     1. Bootstrap once with `./scripts/update_statamic_docs.sh --docs-dir <shared-path>`.
+     2. Run parallel `search_statamic_docs.sh` calls with the same `--docs-dir <shared-path>` and `--no-bootstrap`.
    - Use **statamic.dev** for canonical explanations.
    - Use **GitHub mirror** (statamic/docs) for fast full-text search, diffs, and linking to exact Markdown.
    - If information conflicts, treat **statamic.dev** as source of truth and mention the discrepancy.
@@ -74,6 +77,12 @@ From this repository root, maintainers may also use:
 ./scripts/search_statamic_docs.sh "your query"
 ```
 If the mirror is missing, this command auto-runs `./scripts/update_statamic_docs.sh` unless `--no-bootstrap` is provided.
+
+Parallel-safe pattern:
+```bash
+./scripts/update_statamic_docs.sh --docs-dir /tmp/statamic-docs-shared
+./scripts/search_statamic_docs.sh --docs-dir /tmp/statamic-docs-shared --no-bootstrap --top 20 "antlers"
+```
 
 If the query is broad, narrow it with ripgrep flags:
 ```bash

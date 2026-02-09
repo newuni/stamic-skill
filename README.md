@@ -13,8 +13,8 @@ This repository contains a single skill layout:
 - `skills/stamic-skill/SKILL.md` — main skill instructions and workflow.
 - `skills/stamic-skill/references/playbooks/` — short, actionable playbooks.
 - `skills/stamic-skill/references/playbook-map.md` — coverage map (official docs → playbooks).
-- `skills/stamic-skill/scripts/update_statamic_docs.sh` — runtime bootstrap/update for local docs mirror.
-- `skills/stamic-skill/scripts/search_statamic_docs.sh` — helper to search a local docs mirror (optional).
+- `skills/stamic-skill/scripts/update_statamic_docs.sh` — runtime bootstrap/update for local docs mirror (with lock + atomic clone).
+- `skills/stamic-skill/scripts/search_statamic_docs.sh` — helper to search a local docs mirror (optional; waits for in-progress updates).
 - `dev-scripts/` — repo-maintenance tooling (mirror update, smoke checks, consistency checks).
 
 ## Install / Update (Codex via `npx skills`)

@@ -31,6 +31,8 @@ Ejemplos de prompts:
 ./scripts/update_statamic_docs.sh /tmp/statamic-docs
 ```
 
+El update usa lock de proceso + clonación atómica para evitar corrupción del mirror con agentes concurrentes.
+
 En este repositorio (mantenimiento), también existe:
 
 ```bash
@@ -45,7 +47,14 @@ En este repositorio (mantenimiento), también existe:
 ./scripts/search_statamic_docs.sh --docs-dir /tmp/statamic-docs "antlers"
 ```
 
-Si el mirror local no existe, `search_statamic_docs.sh` lo bootstrappea automáticamente (puedes desactivarlo con `--no-bootstrap`).
+Si el mirror local no existe, `search_statamic_docs.sh` lo bootstrappea automáticamente (puedes desactivarlo con `--no-bootstrap`). También espera automáticamente a que termine un update en curso.
+
+Patrón recomendado para búsquedas en paralelo:
+
+```bash
+./scripts/update_statamic_docs.sh --docs-dir /tmp/statamic-docs-shared
+./scripts/search_statamic_docs.sh --docs-dir /tmp/statamic-docs-shared --no-bootstrap --top 20 "antlers"
+```
 
 Desde la raíz del repo también puedes usar el wrapper:
 

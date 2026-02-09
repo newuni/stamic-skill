@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.6 — 2026-02-09
+
+- Added lock orchestration with stale lock cleanup to `scripts/update_statamic_docs.sh` to prevent concurrent bootstrap corruption.
+- Switched bootstrap cloning to atomic temp-clone + move for safer first-time setup.
+- Updated `scripts/search_statamic_docs.sh` to wait for update locks and added `--wait-timeout`.
+- Added smoke coverage for concurrent searches against a missing mirror.
+- Updated docs with the recommended bootstrap-once + parallel `--no-bootstrap` pattern.
+
 ## 1.0.5 — 2026-02-09
 
 - Added bundled runtime script `scripts/update_statamic_docs.sh` to bootstrap/update local docs mirrors after skill installation.

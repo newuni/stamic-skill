@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.6 — 2026-02-09
+
+- Added cross-process locking with stale lock cleanup to `skills/stamic-skill/scripts/update_statamic_docs.sh`.
+- Switched docs bootstrap cloning to an atomic temp-clone + move flow to prevent partial/corrupt mirrors.
+- Updated `skills/stamic-skill/scripts/search_statamic_docs.sh` to wait for in-progress updates and expose `--wait-timeout`.
+- Added parallel bootstrap/search coverage to `dev-scripts/smoke_statamic_docs.sh`.
+- Updated skill docs with a parallel-safe bootstrap/search pattern.
+
 ## 1.0.5 — 2026-02-09
 
 - Added runtime docs bootstrap script: `skills/stamic-skill/scripts/update_statamic_docs.sh`.
