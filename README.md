@@ -13,10 +13,9 @@ This repository contains a single skill layout:
 - `skills/stamic-skill/SKILL.md` — main skill instructions and workflow.
 - `skills/stamic-skill/references/playbooks/` — short, actionable playbooks.
 - `skills/stamic-skill/references/playbook-map.md` — coverage map (official docs → playbooks).
+- `skills/stamic-skill/scripts/search_statamic_docs.sh` — helper to search a local docs mirror (optional).
 
 ## Install / Update (Codex via `npx skills`)
-
-> If you say `npx skill`, you probably mean the `skills` CLI.
 
 List available skills in this repo:
 
@@ -30,7 +29,7 @@ Install for Codex (global):
 npx skills add newuni/stamic-skill --skill stamic-skill --agent codex -g -y
 ```
 
-Update / re-sync (idempotent):
+Update / re-sync:
 
 ```bash
 npx skills add newuni/stamic-skill --skill stamic-skill --agent codex -g -y

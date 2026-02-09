@@ -4,11 +4,14 @@ set -euo pipefail
 # Quick smoke test for the Statamic docs mirror + search tooling.
 #
 # Usage:
-#   ./scripts/smoke_test.sh
+#   ./scripts/smoke_statamic_docs.sh
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 "$SCRIPT_DIR/update_statamic_docs.sh" >/dev/null
+
+# Note: search script expects the mirror at the skill default path.
+# (update_statamic_docs.sh uses the same default).
 
 # Pick a couple of terms that should exist across versions.
 TERMS=("collections" "blueprint" "webauthn")
