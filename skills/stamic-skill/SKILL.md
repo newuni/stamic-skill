@@ -4,7 +4,7 @@ description: Statamic 6 development skill with documentation-backed guidance fro
 license: MIT
 metadata:
   author: newuni
-  version: "1.0.6"
+  version: "1.0.7"
 ---
 
 # stamic-skill (Statamic 6 Dev)
@@ -77,6 +77,7 @@ From this repository root, maintainers may also use:
 ./scripts/search_statamic_docs.sh "your query"
 ```
 If the mirror is missing, this command auto-runs `./scripts/update_statamic_docs.sh` unless `--no-bootstrap` is provided.
+Use `--rank-mode fzf` (or `--rank-mode hybrid` with `--top`) for non-interactive fuzzy ranking. If `fzf` is unavailable, search continues with plain `rg/grep` output.
 
 Parallel-safe pattern:
 ```bash
@@ -87,4 +88,5 @@ Parallel-safe pattern:
 If the query is broad, narrow it with ripgrep flags:
 ```bash
 ./scripts/search_statamic_docs.sh --top 20 "antlers"
+./scripts/search_statamic_docs.sh --rank-mode hybrid --top 20 "assets container"
 ```

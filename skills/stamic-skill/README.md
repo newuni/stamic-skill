@@ -45,9 +45,11 @@ En este repositorio (mantenimiento), también existe:
 ./scripts/search_statamic_docs.sh "webauthn"
 ./scripts/search_statamic_docs.sh --context 2 "forms"
 ./scripts/search_statamic_docs.sh --docs-dir /tmp/statamic-docs "antlers"
+./scripts/search_statamic_docs.sh --rank-mode hybrid --top 20 "asset container"
 ```
 
 Si el mirror local no existe, `search_statamic_docs.sh` lo bootstrappea automáticamente (puedes desactivarlo con `--no-bootstrap`). También espera automáticamente a que termine un update en curso.
+El ranking fuzzy con `fzf` es opcional y no interactivo (`--rank-mode fzf|hybrid`); si `fzf` no está instalado, hace fallback automático a resultados planos.
 
 Patrón recomendado para búsquedas en paralelo:
 

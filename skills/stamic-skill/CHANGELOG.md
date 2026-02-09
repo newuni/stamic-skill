@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.7 — 2026-02-09
+
+- Added `--rank-mode` (`none`, `fzf`, `hybrid`) to `scripts/search_statamic_docs.sh`.
+- Added non-interactive fuzzy ranking with `fzf --filter` and robust fallback to plain search when `fzf` is missing or yields no lines.
+- Added stronger CLI input validation for numeric options (`--top`, `--context`, `--wait-timeout`).
+- Updated docs so agents can discover, explain, and safely use fuzzy ranking in parallel workflows.
+- Extended smoke tests to cover rank-mode behavior end-to-end.
+
 ## 1.0.6 — 2026-02-09
 
 - Added lock orchestration with stale lock cleanup to `scripts/update_statamic_docs.sh` to prevent concurrent bootstrap corruption.

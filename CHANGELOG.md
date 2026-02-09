@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.7 — 2026-02-09
+
+- Added `--rank-mode none|fzf|hybrid` to `skills/stamic-skill/scripts/search_statamic_docs.sh`.
+- Implemented non-interactive `fzf` ranking with guaranteed fallback to plain `rg/grep` results when `fzf` is unavailable or returns no lines.
+- Added numeric option validation and clearer help text for search CLI options.
+- Updated skill docs to explain discovery/usage of fuzzy ranking and fallback behavior.
+- Extended smoke checks to validate rank-mode behavior (`none`, `fzf`, `hybrid`).
+
 ## 1.0.6 — 2026-02-09
 
 - Added cross-process locking with stale lock cleanup to `skills/stamic-skill/scripts/update_statamic_docs.sh`.

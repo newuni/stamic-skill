@@ -53,4 +53,14 @@ for term in "${TERMS[@]}"; do
   echo "[smoke] ok: $term"
 done
 
+echo "[smoke] checking rank-mode behavior"
+for mode in none fzf hybrid; do
+  first_line=$("$SCRIPT_DIR/search_statamic_docs.sh" --docs-dir "$DOCS_DIR" --rank-mode "$mode" --top 5 "asset" 2>"$TMP_ROOT/rank-${mode}.err" | head -n 1 || true)
+  if [ -z "$first_line" ]; then
+    echo "[smoke] FAILED: rank mode '$mode' returned no results" >&2
+    exit 1
+  fi
+  echo "[smoke] ok: rank mode $mode"
+done
+
 echo "[smoke] OK"
