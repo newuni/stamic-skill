@@ -27,7 +27,8 @@ Options:
 
 Notes:
   - Prefers ripgrep (rg) if installed; falls back to grep.
-  - For the mirror, run: ./scripts/update_statamic_docs.sh
+  - This script assumes you already have a local docs mirror at --docs-dir (or the default path).
+  - Keeping that mirror updated is intentionally out of scope for the published skill.
 EOF
 }
 
@@ -84,7 +85,7 @@ shift || true
 
 if [ ! -d "$DOCS_DIR" ]; then
   echo "Docs not found at: $DOCS_DIR" >&2
-  echo "Run: ./scripts/update_statamic_docs.sh" >&2
+  echo "This script requires a pre-existing local mirror of github.com/statamic/docs." >&2
   exit 2
 fi
 

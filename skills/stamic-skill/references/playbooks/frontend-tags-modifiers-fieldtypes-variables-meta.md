@@ -62,23 +62,13 @@ Citations for debugging/caching context:
 
 ---
 
-## Mirror search (fastest)
+## Finding details fast (recommended)
 
-If you have a local clone of the docs, searching it is usually faster than navigating the site.
-
-```bash
-# 1) update mirror
-./scripts/update_statamic_docs.sh
-
-# 2) search (prefers rg; grep fallback)
-./scripts/search_statamic_docs.sh --ignore-case --context 2 "form-errors"
-./scripts/search_statamic_docs.sh --ignore-case --context 2 "nav-breadcrumbs"
-./scripts/search_statamic_docs.sh --ignore-case --context 2 "regex_replace"
-```
+Use the official index pages (all-tags / all-modifiers / all-fieldtypes / all-variables), then jump to the concrete item page.
 
 Tips:
 - Search by **slug** (e.g. `form-errors`, `nav-breadcrumbs`, `regex_replace`).
-- If you remember a parameter name, search that parameter to find the right tag.
+- If you remember a parameter name, search that parameter to find the right tag/modifier.
 
 ---
 

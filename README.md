@@ -3,7 +3,6 @@
 An agent skill for **Statamic 6** development.
 
 - Source of truth: **statamic.dev**
-- Optional fast search via a local mirror of **github.com/statamic/docs**
 
 This repository contains a single skill layout:
 
@@ -14,7 +13,6 @@ This repository contains a single skill layout:
 - `skills/stamic-skill/SKILL.md` — main skill instructions and workflow.
 - `skills/stamic-skill/references/playbooks/` — short, actionable playbooks.
 - `skills/stamic-skill/references/playbook-map.md` — coverage map (official docs → playbooks).
-- `skills/stamic-skill/scripts/` — helper scripts to update/search the docs mirror.
 
 ## Install / Update (Codex via `npx skills`)
 
@@ -43,20 +41,6 @@ Force a clean reinstall (optional):
 ```bash
 npx skills remove stamic-skill --agent codex -g -y
 npx skills add newuni/stamic-skill --skill stamic-skill --agent codex -g -y
-```
-
-## Docs mirror (optional)
-
-Update the local `statamic/docs` mirror:
-
-```bash
-./skills/stamic-skill/scripts/update_statamic_docs.sh
-```
-
-Search the mirror:
-
-```bash
-./skills/stamic-skill/scripts/search_statamic_docs.sh "your query"
 ```
 
 ## Contributing
