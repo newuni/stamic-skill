@@ -40,12 +40,6 @@ Ejemplos de prompts:
 
 Recomendado: instalar `rg` (ripgrep). Si no, hace fallback a `grep` (más lento y con menos opciones).
 
-### 3) Smoke test
-
-```bash
-./scripts/smoke_test.sh
-```
-
 ## Validación rápida
 
 - Comprueba que Clawdbot descubre la carpeta como `stamic-skill` (según cómo la instales en tu workspace).
