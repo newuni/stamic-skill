@@ -1,106 +1,124 @@
-# Tags / Modifiers / Fieldtypes / Variables — meta (Statamic 6)
+# Tags / Modifiers / Fieldtypes / Variables — meta playbook (Statamic 6)
 
-Purpose: avoid exploding playbooks into hundreds of per-tag/per-modifier pages.
-Instead, keep a **single meta playbook** with:
-- how to navigate the reference docs
-- how to search fast (local mirror)
-- debugging patterns
-- canonical “index” pages to start from
+This playbook intentionally covers **hundreds of reference pages** (tags/modifiers/fieldtypes/variables) without creating one playbook per item.
 
----
-
-## When to use this playbook
-
-Use this when you need:
-- the right **tag** name + parameters
-- the right **modifier** + chaining examples
-- which **fieldtype** to use / common gotchas
-- what **variables** exist in a given scope (entry, nav, form, glide, etc.)
-
-For exact syntax/params, jump to the official reference docs (links below) and/or search the docs mirror.
+Goal: give you a repeatable workflow to:
+- find the right tag/modifier/fieldtype/variable
+- confirm params + scope quickly (official docs)
+- debug when output isn’t what you expect
 
 ---
 
-## Official reference roots (start here)
+## Canonical roots (official docs)
 
-- Tags
+Start from these “root” pages and then jump to the concrete item page.
+
+- **Tags**
   - Overview: https://statamic.dev/tags/overview
   - All tags: https://statamic.dev/tags/all-tags
 
-- Modifiers
+- **Modifiers**
   - Overview: https://statamic.dev/modifiers/overview
   - All modifiers: https://statamic.dev/modifiers/all-modifiers
 
-- Fieldtypes
+- **Fieldtypes**
   - Overview: https://statamic.dev/fieldtypes/overview
   - All fieldtypes: https://statamic.dev/fieldtypes/all-fieldtypes
 
-- Variables
+- **Variables**
   - All variables: https://statamic.dev/variables/all-variables
 
+Citations for debugging/caching context:
+- Debugging: https://statamic.dev/advanced-topics/debugging
+- Caching: https://statamic.dev/advanced-topics/caching
+- Stache: https://statamic.dev/advanced-topics/stache
+
 ---
 
-## Fast lookup workflow (recommended)
+## Workflow (do this every time)
 
-1) Start from the **index** page (all-tags / all-modifiers / all-fieldtypes / all-variables).
-2) Identify the page for the concrete item.
-3) Read:
-   - what it does
-   - parameters
+1) **Identify what you need**
+   - “I need to loop entries” → likely a *tag* (e.g. collection/entries-related)
+   - “I need to transform a value” → likely a *modifier*
+   - “I need an editor UI in the CP” → likely a *fieldtype*
+   - “I need to know what data exists here” → likely *variables* (scope)
+
+2) **Go to the root index** (all-*) and locate the item
+   - use browser find or search (see “Mirror search” below)
+
+3) **Open the concrete item page and confirm**
+   - parameters (names + defaults)
+   - expected input/output type
+   - scope limitations (where it works)
    - examples
-   - return values / scope
-4) Cross-check with your current context:
-   - Antlers vs Blade
-   - entries vs terms vs nav vs assets vs forms
-   - multisite / localization
+
+4) **Implement the smallest working snippet**
+   - no conditionals, no partials, no caching
+
+5) **Only then compose**
+   - chaining modifiers
+   - adding conditionals/partials
+   - enabling caching
 
 ---
 
-## Local mirror search (offline-ish)
+## Mirror search (fastest)
 
-If the docs mirror exists locally, searching is the fastest way to find relevant pages/snippets:
+If you have a local clone of the docs, searching it is usually faster than navigating the site.
 
 ```bash
-# update mirror
+# 1) update mirror
 ./scripts/update_statamic_docs.sh
 
-# search (prefer rg; grep fallback)
+# 2) search (prefers rg; grep fallback)
 ./scripts/search_statamic_docs.sh --ignore-case --context 2 "form-errors"
-./scripts/search_statamic_docs.sh --ignore-case "modifier:markdown"
+./scripts/search_statamic_docs.sh --ignore-case --context 2 "nav-breadcrumbs"
+./scripts/search_statamic_docs.sh --ignore-case --context 2 "regex_replace"
 ```
 
 Tips:
-- Search by the exact slug (e.g. `form-errors`, `regex_replace`, `nav-breadcrumbs`).
-- Search for parameter names when you don’t remember the tag.
+- Search by **slug** (e.g. `form-errors`, `nav-breadcrumbs`, `regex_replace`).
+- If you remember a parameter name, search that parameter to find the right tag.
 
 ---
 
-## Debugging patterns (practical)
+## Debugging checklist (practical)
 
-### 1) Reduce to minimal template
-- Strip the template down to 5–10 lines.
-- Hardcode inputs first (no conditionals, no loops).
+### A) Scope + data shape
+- Confirm you are in the correct context:
+  - inside `{{ form }}` you get form-related variables; outside you don’t.
+  - nav-related tags/vars often require a nav handle / tree.
+- Confirm whether you have:
+  - a single item vs a list
+  - raw vs augmented values
 
-### 2) Inspect data shape
-- In Antlers, use the official debugging helpers (see Advanced Topics → Debugging).
-- Verify if you’re dealing with:
-  - a single item vs a collection
-  - augmented values vs raw values
+### B) Reduce to a minimal repro
+- Reduce template to 5–15 lines.
+- Hardcode the inputs.
+- Remove partials and components.
 
-### 3) Validate scope
-Common gotcha: tags/variables only exist in certain contexts.
-Example: inside `{{ form }}` you get form-related variables that don’t exist outside.
-
-### 4) Verify caching boundaries
-If output doesn’t change:
-- check static caching / stache
-- check if the template/partials are cached
-- use nocache/disable caching only for debugging
+### C) Caching/staleness
+If you “fix” something but output doesn’t change:
+- check static caching is not serving old HTML
+- check Stache / caches are not masking updates
+- temporarily disable caching for the page/partial to confirm the template logic is correct
 
 ---
 
-## How we keep this sustainable
+## Pitfalls (common gotchas)
 
-- We don’t create per-tag/per-modifier playbooks.
-- If a tag/modifier is critical for your project (e.g. `nav`, `form`, `glide`, `cache`), we may add a **small focused section** here with 1–2 examples.
-- Everything else: link to canonical docs + mirror search.
+- **Wrong section**: there are tags, variables, and fieldtypes with similar names.
+- **Context mismatch**: a variable exists only inside a given tag scope.
+- **Case/slug mismatch**: use the exact slug in searches.
+- **Caching**: you’re debugging the wrong output (cached page vs template change).
+
+---
+
+## Policy for expanding this playbook (to keep it sustainable)
+
+- We do **not** create per-tag/per-modifier playbooks.
+- If a small set is high-impact for the project (typical: `nav`, `form`, `glide`, `cache`, `search`), we add a **short subsection** here with:
+  - 1 working example
+  - 2–3 key params
+  - 2 common pitfalls
+  - link to the official item page
