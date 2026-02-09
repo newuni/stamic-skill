@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.3 — 2026-02-09
+
+- Removed duplicate playbooks and consolidated to one canonical file per topic.
+- Brought all playbooks to a consistent template baseline (`Summary`, `Steps`, `Sources`).
+- Reworked index generation/matching to prioritize explicit map references and canonical docs links.
+- Strengthened playbook sync validation (duplicate titles + required section checks).
+- Cleaned references to remove non-canonical ecosystem noise and legacy wording.
+
 ## 1.0.2 — 2026-02-09
 
 - Added `dev-scripts/generate_playbook_index.sh` to generate a playbook coverage index from map + playbook URLs.

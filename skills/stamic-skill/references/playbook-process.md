@@ -44,9 +44,9 @@ Update status in `references/playbook-map.md`:
    - If useful, add a “Docs anchor” (section heading) so it’s quickly verifiable.
    - Optionally include the statamic/docs path if/when we have the local mirror updated.
 
-6) **Add Boost coordination note (only if relevant)**
+6) **Add Laravel coordination note (only if relevant)**
    - If the topic touches Laravel infrastructure (cache stores, Redis config, deployment hooks), add a short line:
-     - “Laravel-side: use Boost for …”
+     - “Laravel-side: follow official Laravel docs/project conventions for …”
 
 7) **Second pass (for REFINED)**
    - Remove fluff.

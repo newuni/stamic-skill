@@ -1,6 +1,6 @@
 # stamic-skill (Statamic 6 Dev)
 
-Skill (formato legacy para Clawdbot) para desarrollo con **Statamic 6**.
+Skill (formato legacy) para desarrollo con **Statamic 6**.
 
 - Archivo principal: `SKILL.md`
 - Playbooks: `references/playbooks/`
@@ -53,7 +53,7 @@ Recomendado: instalar `rg` (ripgrep). Si no, hace fallback a `grep` (más lento 
 - Regenerar índice: `./dev-scripts/generate_playbook_index.sh`
 - Validar sync mapa↔playbooks: `./dev-scripts/check_playbook_sync.sh`
 - Smoke mirror+búsqueda: `./dev-scripts/smoke_statamic_docs.sh`
-- Comprueba que Clawdbot descubre la carpeta como `stamic-skill` (según cómo la instales en tu workspace).
+- Comprueba que tu agente descubre la carpeta como `stamic-skill` (según cómo la instales en tu workspace).
 - Si no aparece, reinicia el gateway.
 - Usa `references/playbook-map.md` para ver qué temas están listos (`REFINED`) vs pendientes.
 

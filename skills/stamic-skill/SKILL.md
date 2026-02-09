@@ -4,7 +4,7 @@ description: Statamic 6 development skill with documentation-backed guidance fro
 license: MIT
 metadata:
   author: newuni
-  version: "1.0.2"
+  version: "1.0.3"
 ---
 
 # stamic-skill (Statamic 6 Dev)
@@ -26,9 +26,9 @@ Provide Statamic 6 documentation-backed guidance and implementation help, optimi
    - Answer with short, actionable steps.
    - Include links (statamic.dev and/or specific docs file paths) so the team can verify.
 
-4. **Coordinate with Laravel Boost (complementary)**
-   - Use Laravel Boost guidance/tools for Laravel framework concerns (Artisan, Eloquent, debugging, environment).
+4. **Separate Statamic vs Laravel concerns**
    - Use this skill for Statamic concepts and conventions (blueprints/fieldsets, entries, taxonomies, Antlers, tags/modifiers, Stache/cache, sites).
+   - For Laravel framework mechanics (Artisan, Eloquent, queues, debugging, environment), rely on official Laravel documentation and project conventions.
 
 ## What to do for common requests
 
@@ -51,7 +51,7 @@ Provide Statamic 6 documentation-backed guidance and implementation help, optimi
 
 ### references/
 - `references/sources.md`: canonical sources and how to treat them.
-- `references/statamic-mcp-notes.md`: lightweight domain taxonomy + response checklist inspired by statamic-mcp.
+- `references/statamic-mcp-notes.md`: domain taxonomy + response checklist for consistent Statamic 6 answers.
 
 ### scripts/
 Use these scripts when you need deterministic, repeatable doc lookup.

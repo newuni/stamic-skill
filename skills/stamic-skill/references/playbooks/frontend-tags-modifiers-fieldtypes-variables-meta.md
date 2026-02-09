@@ -1,6 +1,10 @@
 # Tags / Modifiers / Fieldtypes / Variables — meta playbook (Statamic 6)
 
-This playbook intentionally covers **hundreds of reference pages** (tags/modifiers/fieldtypes/variables) without creating one playbook per item.
+**Summary:** This meta playbook covers the high-volume reference families (tags, modifiers, fieldtypes, variables) without creating one file per item. It provides a repeatable method to locate the right reference, validate parameters/scope, and debug output issues fast.
+
+**When to use:**
+- You need to find the right tag/modifier/fieldtype/variable quickly.
+- You want a stable workflow for debugging template/reference issues.
 
 Goal: give you a repeatable workflow to:
 - find the right tag/modifier/fieldtype/variable
@@ -35,7 +39,7 @@ Citations for debugging/caching context:
 
 ---
 
-## Workflow (do this every time)
+## Steps
 
 1) **Identify what you need**
    - “I need to loop entries” → likely a *tag* (e.g. collection/entries-related)
@@ -112,3 +116,17 @@ If you “fix” something but output doesn’t change:
   - 2–3 key params
   - 2 common pitfalls
   - link to the official item page
+
+---
+
+## Sources
+- https://statamic.dev/tags/overview
+- https://statamic.dev/tags/all-tags
+- https://statamic.dev/modifiers/overview
+- https://statamic.dev/modifiers/all-modifiers
+- https://statamic.dev/fieldtypes/overview
+- https://statamic.dev/fieldtypes/all-fieldtypes
+- https://statamic.dev/variables/all-variables
+- https://statamic.dev/advanced-topics/debugging
+- https://statamic.dev/advanced-topics/caching
+- https://statamic.dev/advanced-topics/stache

@@ -7,20 +7,18 @@ Source files:
 - `skills/stamic-skill/references/playbooks/*.md`
 
 Status legend:
-- `REFINED` / `DRAFTED` / `PENDING`: derived from map URLs.
-- `REFINED*` / `DRAFTED*`: playbook URL matches map entries with mixed statuses.
+- `REFINED` / `DRAFTED` / `PENDING`: mapped from `playbook-map.md` status entries.
 - `LINK_ONLY`: only matches LINK_ONLY map URLs.
-- `UNMAPPED`: no URL match in map.
+- `UNMAPPED`: no map URL/Playbook match found.
 
 Counts:
-- `DRAFTED`: 92
-- `REFINED`: 17
-- `REFINED*`: 3
+- `DRAFTED`: 91
+- `REFINED`: 19
 
-| Slug | Title | Status | Map URL | Notes |
+| Slug | Title | Status | Map Match | Notes |
 | --- | --- | --- | --- | --- |
-| `addons-building-an-addon` | Addons: Building an Addon | `REFINED` | https://statamic.dev/addons/building-an-addon | - |
-| `addons-commands` | Addons: Commands | `REFINED` | https://statamic.dev/addons/building-an-addon | - |
+| `addons-building-an-addon` | Addons: Building an Addon | `REFINED` | https://statamic.dev/addons/building-an-addon | Mixed map statuses for selected URL: DRAFTED, REFINED |
+| `addons-commands` | Addons: Commands | `DRAFTED` | playbook:addons-commands | - |
 | `addons-overview` | Addons: Overview | `DRAFTED` | https://statamic.dev/addons/overview | - |
 | `addons-testing` | Addons: Testing | `DRAFTED` | https://statamic.dev/addons/testing | - |
 | `addons-vite-tooling` | Addons: Vite Tooling | `DRAFTED` | https://statamic.dev/addons/vite-tooling | - |
@@ -34,7 +32,6 @@ Counts:
 | `advanced-topics-sites-api` | Advanced Topics: Sites API (statamic.com) | `DRAFTED` | https://statamic.dev/advanced-topics/sites-api | - |
 | `advanced-topics-stache` | Advanced Topics: Stache | `DRAFTED` | https://statamic.dev/advanced-topics/stache | - |
 | `advanced-topics-static-caching` | Advanced Topics: Static Caching | `REFINED` | https://statamic.dev/advanced-topics/static-caching | - |
-| `advanced-topics-task-scheduling` | Advanced Topics: Task Scheduling | `DRAFTED` | https://statamic.dev/advanced-topics/scheduling | - |
 | `advanced-topics-yaml` | Advanced Topics: YAML | `DRAFTED` | https://statamic.dev/advanced-topics/yaml | - |
 | `backend-apis-actions` | Backend & APIs: Actions | `DRAFTED` | https://statamic.dev/backend-apis/actions | - |
 | `backend-apis-blink-cache` | Backend & APIs: Blink Cache | `DRAFTED` | https://statamic.dev/backend-apis/blink-cache | - |
@@ -66,7 +63,6 @@ Counts:
 | `control-panel-command-palette` | Control Panel: Command Palette | `DRAFTED` | https://statamic.dev/control-panel/command-palette | - |
 | `control-panel-conditional-fields` | Control Panel: Conditional Fields | `DRAFTED` | https://statamic.dev/control-panel/conditional-fields | - |
 | `control-panel-cp-translations` | Control Panel: Translations | `DRAFTED` | https://statamic.dev/control-panel/cp-translations | - |
-| `control-panel-customizing-cp-nav` | Control Panel: Customizing the CP Navigation | `DRAFTED` | https://statamic.dev/control-panel/customizing-the-cp-nav | - |
 | `control-panel-customizing-the-cp-nav` | Control Panel: Customizing the CP Navigation | `DRAFTED` | https://statamic.dev/control-panel/customizing-the-cp-nav | - |
 | `control-panel-dashboard` | Control Panel: Dashboard | `DRAFTED` | https://statamic.dev/control-panel/dashboard | - |
 | `control-panel-elevated-sessions` | Control Panel: Elevated Sessions | `DRAFTED` | https://statamic.dev/control-panel/elevated-sessions | - |
@@ -85,37 +81,37 @@ Counts:
 | `control-panel-routing` | Control Panel: Routing (Custom CP routes) | `REFINED` | https://statamic.dev/control-panel/routing | - |
 | `control-panel-toast-notifications` | Control Panel: Toast Notifications | `DRAFTED` | https://statamic.dev/control-panel/toast-notifications | - |
 | `control-panel-users` | Control Panel: Users | `DRAFTED` | https://statamic.dev/control-panel/users | - |
-| `control-panel-utilities-extending` | Control Panel: Utilities (Extending) | `DRAFTED` | https://statamic.dev/control-panel/utilities | - |
 | `control-panel-utilities` | Control Panel: Utilities | `DRAFTED` | https://statamic.dev/control-panel/utilities | - |
+| `control-panel-utilities-extending` | Control Panel: Utilities (Extending) | `DRAFTED` | https://statamic.dev/control-panel/utilities | - |
 | `control-panel-white-labeling` | Control Panel: White Labeling | `DRAFTED` | https://statamic.dev/control-panel/white-labeling | - |
 | `fieldtypes-build-a-fieldtype` | Fieldtypes: Build a Fieldtype | `DRAFTED` | https://statamic.dev/fieldtypes/build-a-fieldtype | - |
-| `frontend-antlers-templates` | Frontend: Antlers Templates | `REFINED` | https://statamic.dev/frontend/antlers | - |
 | `frontend-antlers` | Frontend: Antlers (templates) | `REFINED` | https://statamic.dev/frontend/antlers | - |
+| `frontend-antlers-templates` | Frontend: Antlers Templates | `REFINED` | https://statamic.dev/frontend/antlers | - |
 | `frontend-assets` | Frontend: Assets | `REFINED` | https://statamic.dev/frontend/assets | - |
 | `frontend-augmentation` | Frontend: Augmentation | `REFINED` | https://statamic.dev/frontend/augmentation | - |
-| `frontend-blade-form-field-templates` | Frontend: Blade Form Field Templates | `REFINED` | https://statamic.dev/frontend/blade-form-fields | - |
-| `frontend-blade-templates` | Frontend: Blade Templates | `REFINED` | https://statamic.dev/frontend/blade | - |
 | `frontend-blade` | Frontend: Blade (templates) | `REFINED` | https://statamic.dev/frontend/blade | - |
+| `frontend-blade-form-field-templates` | Frontend: Blade Form Field Templates | `REFINED` | https://statamic.dev/frontend/blade-form-fields | Additional URL matches: https://statamic.dev/frontend/forms |
+| `frontend-blade-templates` | Frontend: Blade Templates | `REFINED` | https://statamic.dev/frontend/blade | - |
 | `frontend-content-queries` | Frontend: Content Queries (PHP) | `REFINED` | https://statamic.dev/frontend/content-queries | - |
 | `frontend-controllers` | Frontend: Controllers | `DRAFTED` | https://statamic.dev/frontend/controllers | - |
 | `frontend-customizing-markdown` | Frontend: Customizing Markdown | `REFINED` | https://statamic.dev/frontend/markdown | - |
 | `frontend-forms` | Frontend: Forms | `REFINED` | https://statamic.dev/frontend/forms | - |
-| `frontend-front-end-frameworks` | Frontend: Front-End Frameworks (JavaScript Frameworks) | `REFINED*` | https://statamic.dev/control-panel/live-preview | - |
+| `frontend-front-end-frameworks` | Frontend: Front-End Frameworks (JavaScript Frameworks) | `REFINED` | https://statamic.dev/frontend/javascript-frameworks | Additional URL matches: https://statamic.dev/frontend/rest-api, https://statamic.dev/frontend/view-models, https://statamic.dev/control-panel/live-preview |
 | `frontend-graphql-api` | Frontend: GraphQL API | `DRAFTED` | https://statamic.dev/graphql | - |
 | `frontend-image-manipulation-glide` | Frontend: Image Manipulation (Glide) | `DRAFTED` | https://statamic.dev/frontend/image-manipulation | - |
 | `frontend-overview` | Frontend: Overview | `DRAFTED` | https://statamic.dev/frontend/overview | - |
 | `frontend-protecting-content` | Frontend: Protecting Content | `DRAFTED` | https://statamic.dev/frontend/protecting-content | - |
 | `frontend-rest-api` | Frontend: REST API (Content API) | `DRAFTED` | https://statamic.dev/frontend/rest-api | - |
 | `frontend-search` | Frontend: Search | `DRAFTED` | https://statamic.dev/frontend/search | - |
-| `frontend-tags-modifiers-fieldtypes-variables-meta` | Tags / Modifiers / Fieldtypes / Variables — meta playbook (Statamic 6) | `REFINED*` | https://statamic.dev/advanced-topics/caching | - |
+| `frontend-tags-modifiers-fieldtypes-variables-meta` | Tags / Modifiers / Fieldtypes / Variables — meta playbook (Statamic 6) | `REFINED` | playbook:frontend-tags-modifiers-fieldtypes-variables-meta | - |
 | `frontend-view-models` | Frontend: View Models | `DRAFTED` | https://statamic.dev/frontend/view-models | - |
 | `frontend-views` | Frontend: Views (Layouts, Templates, Partials) | `REFINED` | https://statamic.dev/frontend/views | - |
 | `getting-started-configuration` | Getting Started: Configuration | `DRAFTED` | https://statamic.dev/getting-started/configuration | - |
 | `getting-started-core-concepts` | Getting Started: Core Concepts | `DRAFTED` | https://statamic.dev/getting-started/core-concepts | - |
-| `getting-started-installing-laravel-herd` | Getting Started: Installing locally with Laravel Herd | `DRAFTED` | https://statamic.dev/getting-started/installing/laravel-herd | - |
-| `getting-started-installing-laravel` | Getting Started: Installing into an existing Laravel application | `DRAFTED` | https://statamic.dev/getting-started/installing/laravel | - |
-| `getting-started-installing-local` | Getting Started: Installing locally (Statamic CLI) | `DRAFTED` | https://statamic.dev/getting-started/installing/local | - |
 | `getting-started-installing` | Getting Started: Installing Statamic (overview) | `DRAFTED` | https://statamic.dev/getting-started/installing | - |
+| `getting-started-installing-laravel` | Getting Started: Installing into an existing Laravel application | `DRAFTED` | https://statamic.dev/getting-started/installing/laravel | - |
+| `getting-started-installing-laravel-herd` | Getting Started: Installing locally with Laravel Herd | `DRAFTED` | https://statamic.dev/getting-started/installing/laravel-herd | - |
+| `getting-started-installing-local` | Getting Started: Installing locally (Statamic CLI) | `DRAFTED` | https://statamic.dev/getting-started/installing/local | - |
 | `getting-started-quick-start-guide` | Getting Started: Quick Start Guide | `DRAFTED` | https://statamic.dev/getting-started/quick-start-guide | - |
 | `getting-started-requirements` | Getting Started: Requirements | `DRAFTED` | https://statamic.dev/getting-started/requirements | - |
 | `kb-optimizing-assets` | Knowledge Base: Optimizing Assets | `DRAFTED` | https://statamic.dev/knowledge-base/tips/optimizing-assets | - |
@@ -124,10 +120,10 @@ Counts:
 | `modifiers-building-modifiers` | Modifiers: Building Modifiers | `DRAFTED` | https://statamic.dev/extending/modifiers | - |
 | `modifiers-overview` | Modifiers: Overview | `DRAFTED` | https://statamic.dev/modifiers/overview | - |
 | `tags-building-a-tag` | Tags: Building a Tag | `DRAFTED` | https://statamic.dev/tags/building-a-tag | - |
-| `tags-overview` | Tags: Overview | `REFINED*` | https://statamic.dev/tags/overview | - |
+| `tags-overview` | Tags: Overview | `DRAFTED` | https://statamic.dev/tags/overview | - |
 | `ui-components-overview` | UI Components: Overview | `DRAFTED` | https://ui.statamic.dev | - |
 | `vue-components-append-and-events` | Vue Components: Appending + Events | `DRAFTED` | https://statamic.dev/vue-components/overview | - |
 | `vue-components-overview` | Vue Components: Overview (Extending the CP) | `DRAFTED` | https://statamic.dev/vue-components/overview | - |
-| `vue-components-recipes` | Vue Components: Recipes (CP extensions) | `DRAFTED` | https://statamic.dev/backend-apis/actions | - |
+| `vue-components-recipes` | Vue Components: Recipes (CP extensions) | `REFINED` | playbook:vue-components-recipes | - |
 | `widgets-building-a-widget` | Widgets: Building a Widget | `DRAFTED` | https://statamic.dev/widgets/building-a-widget | - |
 | `widgets-overview` | Widgets: Overview (All Widgets) | `DRAFTED` | https://statamic.dev/widgets/all-widgets | - |

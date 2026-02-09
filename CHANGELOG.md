@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.3 — 2026-02-09
+
+- Removed duplicate playbooks and kept a single canonical file per topic.
+- Normalized all playbooks to the required template sections (`Summary`, `Steps`, `Sources`).
+- Reworked playbook index generation to use canonical map matches (`Docs:` and explicit `Playbook:` references) instead of ambiguous URL intersections.
+- Hardened sync checks with duplicate-title and required-section validation.
+- Removed non-canonical ecosystem references and legacy Boost/Clawdbot wording from skill docs.
+
 ## 1.0.2 — 2026-02-09
 
 - Added `dev-scripts/generate_playbook_index.sh` to build `skills/stamic-skill/references/playbook-index.md`.

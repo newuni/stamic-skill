@@ -2,6 +2,12 @@
 
 **Summary:** Practical patterns for extending the Statamic Control Panel with Vue components, across addons, utilities, widgets, actions, and fieldtypes.
 
+## Steps
+1. Pick the extension surface first (component registration, Inertia page, widget, action callback, fieldtype UI).
+2. Implement the smallest recipe below that matches your use case.
+3. Validate behavior in CP navigation and clean up mounted resources (`destroy()` for appended components).
+4. Expand only after the minimal recipe works end-to-end.
+
 ## Recipe 1: Register a component (addon)
 
 1. Ensure your addon loads CP JS via Vite (see `addons-vite-tooling.md`).

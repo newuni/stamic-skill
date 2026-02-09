@@ -1,35 +1,30 @@
-# Notes inspired by cboxdk/statamic-mcp (lightweight)
+# Response Guidelines (Statamic 6)
 
-Goal: reuse the *useful* structuring ideas without importing MCP complexity.
+Purpose: keep responses consistent, actionable, and traceable to official Statamic documentation.
 
-## Domain taxonomy (for routing questions)
+## Domain routing taxonomy
 
-Use this as a first-pass classifier to decide what to search and what to answer.
+Use this as a first-pass classifier before searching docs.
 
 - **Blueprints / Fieldsets**: fields, validation expectations, content modeling.
 - **Content (Entries/Terms/Globals)**: CRUD patterns, publishing, localization.
-- **Structures**: navigations, collections structures, forms, globals structure, asset containers.
-- **Templates**: Antlers vs Blade usage, tags/modifiers, performance, security.
-- **System / Caching**: stache, static caching, views; when to clear/warm; config.
-- **Users / Roles / Permissions**: RBAC, multi-user dev workflows.
+- **Structures**: navigation trees, form/global structures, asset containers.
+- **Templates**: Antlers/Blade usage, tags/modifiers, escaping/security.
+- **System / Caching**: Stache, static caching, cache clear/warm behavior.
+- **Users / Roles / Permissions**: RBAC and editorial workflows.
 - **Assets**: containers/disks, metadata, permissions.
-- **Sites**: multi-site configuration, site switching, localized content.
-- **Addons / Extensibility**: custom tags/modifiers/fieldtypes, addon structure.
+- **Sites**: multi-site configuration and localization.
+- **Addons / Extensibility**: tags/modifiers/fieldtypes/widgets/utilities.
 
-## Response checklist (small but high-signal)
+## Response checklist
 
-When answering, include only what matters:
+1. Confirm version assumptions (default: Statamic 6).
+2. Cite sources (`statamic.dev` and/or `statamic/docs` path).
+3. Provide at least one actionable next step (command, path, snippet).
+4. Mention pitfalls only when relevant (cache, multi-site, escaping/security).
 
-1) **Confirm version**: assume Statamic 6 unless user says otherwise.
-2) **Cite the source**: link to statamic.dev and/or the exact statamic/docs file/section.
-3) **Give an actionable next step**: command, file path, or minimal snippet.
-4) **Mention common pitfalls only if relevant**:
-   - cache/stache implications
-   - multi-site implications
-   - security (escaping/XSS) for template work
+## Statamic vs Laravel boundary
 
-## Statamic vs Laravel Boost (decision rule)
-
-- If the task is about **Statamic concepts** (blueprints, entries, Antlers, tags/modifiers, Stache), keep it in this skill.
-- If the task is about **Laravel mechanics** (DB queries, Eloquent, queues, debugging, Artisan internals), route to Laravel Boost guidance.
-- For mixed tasks, answer Statamic parts here and explicitly mark which steps belong to Boost.
+- Statamic-specific: model/content/template/stache behavior -> answer in this skill.
+- Laravel-specific: framework internals (DB/Eloquent/queues/debugging) -> use official Laravel docs and project standards.
+- Mixed tasks: separate Statamic and Laravel steps explicitly.

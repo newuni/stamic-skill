@@ -261,7 +261,8 @@ Next (pending):
 Next-next (pending):
 - [ ] Widgets: building a widget — `DRAFTED` — https://statamic.dev/widgets/building-a-widget
 - [ ] Utilities (CP) — `DRAFTED` — https://statamic.dev/control-panel/utilities
-- [ ] Commands (addons) — `DRAFTED` — (see building addon docs)
+- [ ] Commands (addons) — `DRAFTED` — https://statamic.dev/addons/building-an-addon
+  - Playbook: `references/playbooks/addons-commands.md`
 - [ ] Control Panel (Inertia pages) — `DRAFTED` — https://statamic.dev/control-panel/css-javascript
 - [ ] Testing (addons) — `DRAFTED` — https://statamic.dev/addons/testing
 
@@ -302,4 +303,5 @@ Resource APIs (concrete repositories) — `[LINK_ONLY]`:
 - https://statamic.dev/backend-apis/resource-apis/user-repository
 - https://statamic.dev/backend-apis/resource-apis/user-role-repository
 
-- [ ] Vue components (deeper) — `REFINED` — (recipes + append patterns)
+- [ ] Vue components (deeper) — `REFINED`
+  - Playbook: `references/playbooks/vue-components-recipes.md`
