@@ -14,6 +14,7 @@ This repository contains a single skill layout:
 - `skills/stamic-skill/references/playbooks/` — short, actionable playbooks.
 - `skills/stamic-skill/references/playbook-map.md` — coverage map (official docs → playbooks).
 - `skills/stamic-skill/scripts/search_statamic_docs.sh` — helper to search a local docs mirror (optional).
+- `dev-scripts/` — repo-maintenance tooling (mirror update, smoke checks, consistency checks).
 
 ## Install / Update (Codex via `npx skills`)
 
@@ -40,6 +41,22 @@ Force a clean reinstall (optional):
 ```bash
 npx skills remove stamic-skill --agent codex -g -y
 npx skills add newuni/stamic-skill --skill stamic-skill --agent codex -g -y
+```
+
+## Repo Maintenance Scripts
+
+Run these from the repository root:
+
+```bash
+./dev-scripts/update_statamic_docs.sh
+./dev-scripts/check_repo_consistency.sh
+./dev-scripts/smoke_statamic_docs.sh
+```
+
+Expected smoke result:
+
+```text
+[smoke] OK
 ```
 
 ## Contributing

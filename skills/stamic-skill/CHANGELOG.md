@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1 — 2026-02-09
+
+- Updated script references after moving mirror-maintenance tooling to `dev-scripts/`.
+- Kept `scripts/search_statamic_docs.sh` as the runtime lookup utility and updated examples.
+- Added repository consistency checks to prevent stale paths and metadata/changelog version drift.
+
 ## 1.0.0 — 2026-01-29
 
 - First stable release of the **stamic-skill** (Statamic 6 Dev) skill.

@@ -5,7 +5,8 @@ Skill (formato legacy para Clawdbot) para desarrollo con **Statamic 6**.
 - Archivo principal: `SKILL.md`
 - Playbooks: `references/playbooks/`
 - Mapa de cobertura: `references/playbook-map.md`
-- Scripts (mirror + búsqueda): `scripts/`
+- Scripts (búsqueda en runtime): `scripts/`
+- Scripts de mantenimiento del repo: `dev-scripts/` (en la raíz del repo)
 
 ## Qué hace
 
@@ -25,9 +26,9 @@ Ejemplos de prompts:
 ### 1) Descargar/actualizar el mirror de docs
 
 ```bash
-./scripts/update_statamic_docs.sh
+./dev-scripts/update_statamic_docs.sh
 # o apuntar a otra carpeta
-./scripts/update_statamic_docs.sh /tmp/statamic-docs
+./dev-scripts/update_statamic_docs.sh /tmp/statamic-docs
 ```
 
 ### 2) Buscar en el mirror
@@ -38,10 +39,18 @@ Ejemplos de prompts:
 ./scripts/search_statamic_docs.sh --docs-dir /tmp/statamic-docs "antlers"
 ```
 
+Desde la raíz del repo también puedes usar el wrapper:
+
+```bash
+./dev-scripts/search_statamic_docs.sh "webauthn"
+```
+
 Recomendado: instalar `rg` (ripgrep). Si no, hace fallback a `grep` (más lento y con menos opciones).
 
 ## Validación rápida
 
+- Desde la raíz del repo: `./dev-scripts/check_repo_consistency.sh`
+- Smoke mirror+búsqueda: `./dev-scripts/smoke_statamic_docs.sh`
 - Comprueba que Clawdbot descubre la carpeta como `stamic-skill` (según cómo la instales en tu workspace).
 - Si no aparece, reinicia el gateway.
 - Usa `references/playbook-map.md` para ver qué temas están listos (`REFINED`) vs pendientes.

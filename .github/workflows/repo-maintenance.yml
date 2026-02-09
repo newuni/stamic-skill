@@ -1,0 +1,32 @@
+name: Repo Maintenance Checks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  consistency:
+    name: Consistency
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install ripgrep
+        run: sudo apt-get update && sudo apt-get install -y ripgrep
+
+      - name: Run consistency checks
+        run: ./dev-scripts/check_repo_consistency.sh
+
+  smoke:
+    name: Smoke Docs Search
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run smoke test
+        run: ./dev-scripts/smoke_statamic_docs.sh

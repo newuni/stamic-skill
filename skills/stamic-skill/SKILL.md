@@ -56,10 +56,11 @@ Provide Statamic 6 documentation-backed guidance and implementation help, optimi
 ### scripts/
 Use these scripts when you need deterministic, repeatable doc lookup.
 
-1) Update local docs mirror:
+1) Update local docs mirror (repo maintenance script):
 ```bash
-./scripts/update_statamic_docs.sh
+./dev-scripts/update_statamic_docs.sh
 ```
+Use this from the source repository root. Installed runtime skill copies may not include `dev-scripts/`.
 
 2) Search locally:
 ```bash
@@ -68,5 +69,5 @@ Use these scripts when you need deterministic, repeatable doc lookup.
 
 If the query is broad, narrow it with ripgrep flags:
 ```bash
-./skills/stamic-skill/scripts/search_statamic_docs.sh "antlers" -- -n --glob '!**/README.md'
+./scripts/search_statamic_docs.sh --top 20 "antlers"
 ```
