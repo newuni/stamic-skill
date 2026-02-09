@@ -20,6 +20,32 @@ Ejemplos de prompts:
 - “¿Cómo añado una sección en el CP nav desde un addon?”
 - “Hazme el bundle/build de assets del addon (JS/CSS) con Vite.”
 
+## Scripts (mirror + búsqueda)
+
+### 1) Descargar/actualizar el mirror de docs
+
+```bash
+./scripts/update_statamic_docs.sh
+# o apuntar a otra carpeta
+./scripts/update_statamic_docs.sh /tmp/statamic-docs
+```
+
+### 2) Buscar en el mirror
+
+```bash
+./scripts/search_statamic_docs.sh "webauthn"
+./scripts/search_statamic_docs.sh --context 2 "forms"
+./scripts/search_statamic_docs.sh --docs-dir /tmp/statamic-docs "antlers"
+```
+
+Recomendado: instalar `rg` (ripgrep). Si no, hace fallback a `grep` (más lento y con menos opciones).
+
+### 3) Smoke test
+
+```bash
+./scripts/smoke_test.sh
+```
+
 ## Validación rápida
 
 - Comprueba que Clawdbot descubre la carpeta como `stamic-skill` (según cómo la instales en tu workspace).
