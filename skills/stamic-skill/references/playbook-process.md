@@ -15,8 +15,7 @@ Create one file per playbook:
 - Keep each playbook short and task-oriented.
 
 Update status in `references/playbook-map.md`:
-- `PENDING` → `DRAFTED` when a playbook file exists
-- `DRAFTED` → `REFINED` after a second pass (clarity, steps, pitfalls, links)
+- `PENDING` → `REFINED` after the playbook passes quality checks (clarity, steps, pitfalls, links)
 
 ## Procedure (repeatable)
 

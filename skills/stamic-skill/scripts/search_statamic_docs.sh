@@ -12,13 +12,14 @@ usage() {
 Search Statamic docs (local mirror).
 
 Usage:
-  ./scripts/search_statamic_docs.sh [--docs-dir <path>] [--ignore-case] [--context <N>] [--top <N>] <query>
+  ./scripts/search_statamic_docs.sh [--docs-dir <path>] [--ignore-case] [--context <N>] [--top <N>] [--no-bootstrap] <query>
 
 Options:
   --docs-dir <path>   Docs mirror path (default: <skill-root>/.cache/statamic-docs)
   --ignore-case, -i   Case-insensitive search
   --context <N>       Show N lines of context (default: 0)
   --top <N>           Limit to N result lines (default: unlimited)
+  --no-bootstrap      Do not auto-clone docs mirror when missing
   -h, --help          Show this help
 
 Output:
@@ -26,7 +27,8 @@ Output:
 
 Notes:
   - Prefers ripgrep (rg) if installed; falls back to grep.
-  - Requires an existing local mirror of github.com/statamic/docs.
+  - Auto-bootstraps the mirror on first run unless --no-bootstrap is set.
+  - To bootstrap/update manually, run: ./scripts/update_statamic_docs.sh
 EOF
 }
 
@@ -36,6 +38,7 @@ DOCS_DIR="$DOCS_DIR_DEFAULT"
 CONTEXT=0
 IGNORE_CASE=0
 TOP=""
+AUTO_BOOTSTRAP=1
 
 # Parse options
 while [ $# -gt 0 ]; do
@@ -68,6 +71,10 @@ while [ $# -gt 0 ]; do
       fi
       shift 2
       ;;
+    --no-bootstrap)
+      AUTO_BOOTSTRAP=0
+      shift
+      ;;
     -i|--ignore-case)
       IGNORE_CASE=1
       shift
@@ -90,8 +97,21 @@ if [ -z "$QUERY" ]; then
 fi
 
 if [ ! -d "$DOCS_DIR" ]; then
-  echo "Docs not found at: $DOCS_DIR" >&2
-  echo "This script requires a local mirror of github.com/statamic/docs." >&2
+  if [ "$AUTO_BOOTSTRAP" = "1" ]; then
+    echo "Docs not found at: $DOCS_DIR" >&2
+    echo "Bootstrapping local mirror..." >&2
+    SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    "$SCRIPT_DIR/update_statamic_docs.sh" --docs-dir "$DOCS_DIR"
+  else
+    echo "Docs not found at: $DOCS_DIR" >&2
+    echo "This script requires a local mirror of github.com/statamic/docs." >&2
+    echo "Run: ./scripts/update_statamic_docs.sh --docs-dir \"$DOCS_DIR\"" >&2
+    exit 2
+  fi
+fi
+
+if [ ! -d "$DOCS_DIR" ]; then
+  echo "Docs bootstrap failed. Mirror still missing at: $DOCS_DIR" >&2
   exit 2
 fi
 

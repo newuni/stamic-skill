@@ -13,6 +13,7 @@ This repository contains a single skill layout:
 - `skills/stamic-skill/SKILL.md` — main skill instructions and workflow.
 - `skills/stamic-skill/references/playbooks/` — short, actionable playbooks.
 - `skills/stamic-skill/references/playbook-map.md` — coverage map (official docs → playbooks).
+- `skills/stamic-skill/scripts/update_statamic_docs.sh` — runtime bootstrap/update for local docs mirror.
 - `skills/stamic-skill/scripts/search_statamic_docs.sh` — helper to search a local docs mirror (optional).
 - `dev-scripts/` — repo-maintenance tooling (mirror update, smoke checks, consistency checks).
 
@@ -60,6 +61,16 @@ Expected smoke result:
 ```text
 [smoke] OK
 ```
+
+## Daily Automation
+
+The workflow `.github/workflows/daily-docs-sync-release.yml` runs every day (`03:17 UTC`) and can also be triggered manually.
+
+Behavior:
+- Updates the local Statamic docs mirror.
+- Compares mirror HEAD against `skills/stamic-skill/references/docs-mirror-head.txt`.
+- If HEAD did not change: exits without release.
+- If HEAD changed: runs quality checks, commits updated mirror revision/index, creates a tag `docs-sync-YYYYMMDD-<head>`, and publishes a GitHub release.
 
 ## Contributing
 

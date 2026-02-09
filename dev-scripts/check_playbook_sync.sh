@@ -198,6 +198,10 @@ for url, statuses in sorted(statuses_by_url.items()):
         ordered = sorted(statuses, key=lambda s: status_order[s])
         errors.append(f"map URL `{url}` has mixed statuses including PENDING: {ordered}")
 
+# 4b) DRAFTED is disallowed in the cleaned map.
+if any(e["status"] == "DRAFTED" for e in entries):
+    errors.append("playbook-map.md contains `DRAFTED` entries; use `REFINED` or `PENDING` only")
+
 # 5) Generated index must be up-to-date.
 result = subprocess.run(
     ["./dev-scripts/generate_playbook_index.sh", "--check"],

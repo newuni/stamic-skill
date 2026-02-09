@@ -4,7 +4,7 @@ description: Statamic 6 development skill with documentation-backed guidance fro
 license: MIT
 metadata:
   author: newuni
-  version: "1.0.3"
+  version: "1.0.5"
 ---
 
 # stamic-skill (Statamic 6 Dev)
@@ -17,6 +17,10 @@ Provide Statamic 6 documentation-backed guidance and implementation help, optimi
    - Confirm: Statamic **6** (and Laravel version), project type (fresh vs existing), and whether the request is **Statamic-specific** (content model, Antlers, blueprints, structures) vs **Laravel-specific** (DB, Eloquent, queues, debugging).
 
 2. **Prefer canonical docs, but keep it searchable**
+   - Ensure the local docs mirror exists before searching:
+     ```bash
+     ./scripts/update_statamic_docs.sh
+     ```
    - Use **statamic.dev** for canonical explanations.
    - Use **GitHub mirror** (statamic/docs) for fast full-text search, diffs, and linking to exact Markdown.
    - If information conflicts, treat **statamic.dev** as source of truth and mention the discrepancy.
@@ -51,21 +55,25 @@ Provide Statamic 6 documentation-backed guidance and implementation help, optimi
 
 ### references/
 - `references/sources.md`: canonical sources and how to treat them.
-- `references/statamic-mcp-notes.md`: domain taxonomy + response checklist for consistent Statamic 6 answers.
+- `references/response-guidelines.md`: domain taxonomy + response checklist for consistent Statamic 6 answers.
 
 ### scripts/
 Use these scripts when you need deterministic, repeatable doc lookup.
 
-1) Update local docs mirror (repo maintenance script):
+1) Update/bootstrap local docs mirror (runtime-safe):
+```bash
+./scripts/update_statamic_docs.sh
+```
+From this repository root, maintainers may also use:
 ```bash
 ./dev-scripts/update_statamic_docs.sh
 ```
-Use this from the source repository root. Installed runtime skill copies may not include `dev-scripts/`.
 
 2) Search locally:
 ```bash
 ./scripts/search_statamic_docs.sh "your query"
 ```
+If the mirror is missing, this command auto-runs `./scripts/update_statamic_docs.sh` unless `--no-bootstrap` is provided.
 
 If the query is broad, narrow it with ripgrep flags:
 ```bash

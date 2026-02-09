@@ -1,0 +1,88 @@
+name: Daily Docs Sync Release
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync_and_release:
+    name: Sync mirror and release on change
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install ripgrep
+        run: sudo apt-get update && sudo apt-get install -y ripgrep
+
+      - name: Configure Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Update docs mirror
+        run: ./dev-scripts/update_statamic_docs.sh
+
+      - name: Detect mirror change
+        id: mirror
+        run: |
+          old_head="$(cat skills/stamic-skill/references/docs-mirror-head.txt 2>/dev/null || true)"
+          new_head="$(git -C skills/.cache/statamic-docs rev-parse --short HEAD)"
+          echo "old_head=${old_head}" >> "$GITHUB_OUTPUT"
+          echo "new_head=${new_head}" >> "$GITHUB_OUTPUT"
+          if [ "$old_head" = "$new_head" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Stop when mirror did not change
+        if: steps.mirror.outputs.changed == 'false'
+        run: |
+          echo "No docs mirror change detected (${{ steps.mirror.outputs.new_head }})."
+          echo "Skipping release."
+
+      - name: Update tracked mirror revision
+        if: steps.mirror.outputs.changed == 'true'
+        run: |
+          printf '%s\n' "${{ steps.mirror.outputs.new_head }}" > skills/stamic-skill/references/docs-mirror-head.txt
+
+      - name: Run quality checks
+        if: steps.mirror.outputs.changed == 'true'
+        run: |
+          ./dev-scripts/generate_playbook_index.sh
+          ./dev-scripts/check_playbook_sync.sh
+          ./dev-scripts/check_repo_consistency.sh
+          ./dev-scripts/smoke_statamic_docs.sh
+
+      - name: Commit and tag
+        if: steps.mirror.outputs.changed == 'true'
+        id: publish
+        run: |
+          git add skills/stamic-skill/references/docs-mirror-head.txt skills/stamic-skill/references/playbook-index.md
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            echo "tag_name=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git commit -m "chore: daily docs sync (${{ steps.mirror.outputs.new_head }})"
+          tag_name="docs-sync-$(date -u +%Y%m%d)-${{ steps.mirror.outputs.new_head }}"
+          git tag -a "$tag_name" -m "Daily docs sync ${{ steps.mirror.outputs.new_head }}"
+          git push origin HEAD:main --follow-tags
+          echo "tag_name=$tag_name" >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub release
+        if: steps.mirror.outputs.changed == 'true' && steps.publish.outputs.tag_name != ''
+        run: |
+          gh release create "${{ steps.publish.outputs.tag_name }}" \
+            --title "${{ steps.publish.outputs.tag_name }}" \
+            --notes "Automated daily Statamic docs mirror sync.\n\n- Previous mirror HEAD: ${{ steps.mirror.outputs.old_head }}\n- New mirror HEAD: ${{ steps.mirror.outputs.new_head }}"

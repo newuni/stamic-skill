@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.0.5 — 2026-02-09
+
+- Added runtime docs bootstrap script: `skills/stamic-skill/scripts/update_statamic_docs.sh`.
+- Updated skill instructions to ensure agents call the runtime bootstrap before docs search.
+- Updated `search_statamic_docs.sh` to auto-bootstrap docs mirror on first run (unless `--no-bootstrap`).
+- Updated consistency checks to require runtime bootstrap script presence and references.
+
+## 1.0.4 — 2026-02-09
+
+- Promoted all mapped playbook entries to `REFINED`; removed residual `DRAFTED` state from the active map.
+- Renamed `references/statamic-mcp-notes.md` to `references/response-guidelines.md` and aligned skill references.
+- Tightened sync validation to fail if `DRAFTED` reappears in `playbook-map.md`.
+- Finalized duplicate cleanup and template normalization for production-ready skill content.
+
 ## 1.0.3 — 2026-02-09
 
 - Removed duplicate playbooks and kept a single canonical file per topic.

@@ -3,7 +3,7 @@
 Purpose: map canonical Statamic documentation to small, actionable playbooks.
 
 Conventions:
-- Status: `PENDING` | `DRAFTED` | `REFINED`
+- Status: `PENDING` | `REFINED`
 - Marker: `[LINK_ONLY]` = include as a reference link in the map, but **do not** convert to a playbook yet.
 - Each playbook should aim for:
   1) one-paragraph summary
@@ -18,24 +18,24 @@ Process reference:
 
 ## Phase 1 (core): Getting Started (human/website order)
 
-- [ ] **Requirements** — `DRAFTED`
+- [ ] **Requirements** — `REFINED`
   - Docs: https://statamic.dev/getting-started/requirements
 
-- [ ] **Core Concepts** — `DRAFTED`
+- [ ] **Core Concepts** — `REFINED`
   - Docs: https://statamic.dev/getting-started/core-concepts
 
-- [ ] **Quick Start Guide** — `DRAFTED`
+- [ ] **Quick Start Guide** — `REFINED`
   - Docs: https://statamic.dev/getting-started/quick-start-guide
 
-- [ ] **Installing Statamic (overview)** — `DRAFTED`
+- [ ] **Installing Statamic (overview)** — `REFINED`
   - Docs: https://statamic.dev/getting-started/installing
 
   Sub-pages (core dev):
-  - [ ] **Installing locally** — `DRAFTED`
+  - [ ] **Installing locally** — `REFINED`
     - Docs: https://statamic.dev/getting-started/installing/local
-  - [ ] **Installing with Laravel** — `DRAFTED`
+  - [ ] **Installing with Laravel** — `REFINED`
     - Docs: https://statamic.dev/getting-started/installing/laravel
-  - [ ] **Installing with Laravel Herd** — `DRAFTED`
+  - [ ] **Installing with Laravel Herd** — `REFINED`
     - Docs: https://statamic.dev/getting-started/installing/laravel-herd
 
   Sub-pages (hosts/platforms) — `[LINK_ONLY]`:
@@ -45,7 +45,7 @@ Process reference:
   - https://statamic.dev/getting-started/installing/linode
   - https://statamic.dev/getting-started/installing/laravel-forge-1-click
 
-- [ ] **Configuration** — `DRAFTED`
+- [ ] **Configuration** — `REFINED`
   - Docs: https://statamic.dev/getting-started/configuration
 
 Getting Started (links only for now):
@@ -58,87 +58,87 @@ Getting Started (links only for now):
 
 ## Phase 2 (core): Content Modeling (human/website order)
 
-- [ ] **Overview** — `DRAFTED`
+- [ ] **Overview** — `REFINED`
   - Docs: https://statamic.dev/content-modeling/overview
 
-- [ ] **Collections** — `DRAFTED`
+- [ ] **Collections** — `REFINED`
   - Docs: https://statamic.dev/content-modeling/collections
 
-- [ ] **Taxonomies** — `DRAFTED`
+- [ ] **Taxonomies** — `REFINED`
   - Docs: https://statamic.dev/content-modeling/taxonomies
 
-- [ ] **Globals** — `DRAFTED`
+- [ ] **Globals** — `REFINED`
   - Docs: https://statamic.dev/content-modeling/globals
 
-- [ ] **Navigation** — `DRAFTED`
+- [ ] **Navigation** — `REFINED`
   - Docs: https://statamic.dev/content-modeling/navigation
 
-- [ ] **Routing** — `DRAFTED`
+- [ ] **Routing** — `REFINED`
   - Docs: https://statamic.dev/content-modeling/routing
 
-- [ ] **Blueprints** — `DRAFTED`
+- [ ] **Blueprints** — `REFINED`
   - Docs: https://statamic.dev/content-modeling/blueprints
 
-- [ ] **Fieldsets** — `DRAFTED`
+- [ ] **Fieldsets** — `REFINED`
   - Docs: https://statamic.dev/content-modeling/fieldsets
 
-- [ ] **Fields** — `DRAFTED`
+- [ ] **Fields** — `REFINED`
   - Docs: https://statamic.dev/content-modeling/fields
 
-- [ ] **Structures** — `DRAFTED`
+- [ ] **Structures** — `REFINED`
   - Docs: https://statamic.dev/content-modeling/structures
 
-- [ ] **Computed Values** — `DRAFTED`
+- [ ] **Computed Values** — `REFINED`
   - Docs: https://statamic.dev/content-modeling/computed-values
 
-- [ ] **Data Inheritance** — `DRAFTED`
+- [ ] **Data Inheritance** — `REFINED`
   - Docs: https://statamic.dev/content-modeling/data-inheritance
 
-- [ ] **Relationships** — `DRAFTED`
+- [ ] **Relationships** — `REFINED`
   - Docs: https://statamic.dev/content-modeling/relationships
 
-- [ ] **Revisions** — `DRAFTED`
+- [ ] **Revisions** — `REFINED`
   - Docs: https://statamic.dev/content-modeling/revisions
 
-- [ ] **Validation** — `DRAFTED`
+- [ ] **Validation** — `REFINED`
   - Docs: https://statamic.dev/content-modeling/validation
 
 ---
 
 ## Phase 3 (core): Control Panel (human/website order)
 
-- [ ] **Overview** — `DRAFTED`
+- [ ] **Overview** — `REFINED`
   - Docs: https://statamic.dev/control-panel/overview
 
-- [ ] **Users** — `DRAFTED`
+- [ ] **Users** — `REFINED`
   - Docs: https://statamic.dev/control-panel/users
 
-- [ ] **Dashboard** — `DRAFTED`
+- [ ] **Dashboard** — `REFINED`
   - Docs: https://statamic.dev/control-panel/dashboard
 
-- [ ] **Command Palette** — `DRAFTED`
+- [ ] **Command Palette** — `REFINED`
   - Docs: https://statamic.dev/control-panel/command-palette
 
-- [ ] **Preferences** — `DRAFTED`
+- [ ] **Preferences** — `REFINED`
   - Docs: https://statamic.dev/control-panel/preferences
 
 Next (pending):
-- [ ] Permissions — `DRAFTED` — https://statamic.dev/control-panel/permissions
-- [ ] Multi-Site — `DRAFTED` — https://statamic.dev/control-panel/multi-site
-- [ ] Conditional Fields — `DRAFTED` — https://statamic.dev/control-panel/conditional-fields
-- [ ] Translations — `DRAFTED` — https://statamic.dev/control-panel/cp-translations
-- [ ] White Labeling — `DRAFTED` — https://statamic.dev/control-panel/white-labeling
-- [ ] Keyboard Shortcuts — `DRAFTED` — https://statamic.dev/control-panel/keyboard-shortcuts
-- [ ] Elevated Sessions — `DRAFTED` — https://statamic.dev/control-panel/elevated-sessions
-- [ ] Customizing the CP Nav — `DRAFTED` — https://statamic.dev/control-panel/customizing-the-cp-nav
-- [ ] Multi-User Collaboration — `DRAFTED` — https://statamic.dev/control-panel/multi-user-collaboration
-- [ ] Publish Forms — `DRAFTED` — https://statamic.dev/control-panel/publish-forms
+- [ ] Permissions — `REFINED` — https://statamic.dev/control-panel/permissions
+- [ ] Multi-Site — `REFINED` — https://statamic.dev/control-panel/multi-site
+- [ ] Conditional Fields — `REFINED` — https://statamic.dev/control-panel/conditional-fields
+- [ ] Translations — `REFINED` — https://statamic.dev/control-panel/cp-translations
+- [ ] White Labeling — `REFINED` — https://statamic.dev/control-panel/white-labeling
+- [ ] Keyboard Shortcuts — `REFINED` — https://statamic.dev/control-panel/keyboard-shortcuts
+- [ ] Elevated Sessions — `REFINED` — https://statamic.dev/control-panel/elevated-sessions
+- [ ] Customizing the CP Nav — `REFINED` — https://statamic.dev/control-panel/customizing-the-cp-nav
+- [ ] Multi-User Collaboration — `REFINED` — https://statamic.dev/control-panel/multi-user-collaboration
+- [ ] Publish Forms — `REFINED` — https://statamic.dev/control-panel/publish-forms
 
 Also drafted:
-- [ ] Git Automation — `DRAFTED` — https://statamic.dev/control-panel/git-automation
-- [ ] Live Preview — `DRAFTED` — https://statamic.dev/control-panel/live-preview
-- [ ] Toast Notifications — `DRAFTED` — https://statamic.dev/control-panel/toast-notifications
-- [ ] Utilities — `DRAFTED` — https://statamic.dev/control-panel/utilities
+- [ ] Git Automation — `REFINED` — https://statamic.dev/control-panel/git-automation
+- [ ] Live Preview — `REFINED` — https://statamic.dev/control-panel/live-preview
+- [ ] Toast Notifications — `REFINED` — https://statamic.dev/control-panel/toast-notifications
+- [ ] Utilities — `REFINED` — https://statamic.dev/control-panel/utilities
 - [ ] Routing (CP) — `REFINED` — https://statamic.dev/control-panel/routing
 - [ ] Field Actions — `REFINED` — https://statamic.dev/control-panel/field-actions
 
@@ -150,7 +150,7 @@ Extending:
 
 ## Phase 4 (core): Frontend (human/website order)
 
-- [ ] Frontend Overview — `DRAFTED` — https://statamic.dev/frontend/overview
+- [ ] Frontend Overview — `REFINED` — https://statamic.dev/frontend/overview
 - [ ] Antlers Templates — `REFINED` — https://statamic.dev/frontend/antlers
 - [ ] Blade Templates — `REFINED` — https://statamic.dev/frontend/blade
 - [ ] Views — `REFINED` — https://statamic.dev/frontend/views
@@ -160,18 +160,18 @@ Next (pending):
 - [ ] Assets (frontend) — `REFINED` — https://statamic.dev/frontend/assets
 - [ ] Forms (frontend) — `REFINED` — https://statamic.dev/frontend/forms
 - [ ] Content queries — `REFINED` — https://statamic.dev/frontend/content-queries
-- [ ] Search (frontend) — `DRAFTED` — https://statamic.dev/frontend/search
-- [ ] Image manipulation (Glide) — `DRAFTED` — https://statamic.dev/frontend/image-manipulation
-- [ ] Controllers — `DRAFTED` — https://statamic.dev/frontend/controllers
-- [ ] View Models — `DRAFTED` — https://statamic.dev/frontend/view-models
-- [ ] Protecting Content — `DRAFTED` — https://statamic.dev/frontend/protecting-content
-- [ ] REST API — `DRAFTED` — https://statamic.dev/frontend/rest-api
-- [ ] GraphQL API — `DRAFTED` — https://statamic.dev/graphql
+- [ ] Search (frontend) — `REFINED` — https://statamic.dev/frontend/search
+- [ ] Image manipulation (Glide) — `REFINED` — https://statamic.dev/frontend/image-manipulation
+- [ ] Controllers — `REFINED` — https://statamic.dev/frontend/controllers
+- [ ] View Models — `REFINED` — https://statamic.dev/frontend/view-models
+- [ ] Protecting Content — `REFINED` — https://statamic.dev/frontend/protecting-content
+- [ ] REST API — `REFINED` — https://statamic.dev/frontend/rest-api
+- [ ] GraphQL API — `REFINED` — https://statamic.dev/graphql
 - [LINK_ONLY] GraphQL API (alt URL) — https://statamic.dev/frontend/graphql
 - [ ] Front-End Frameworks — `REFINED` — https://statamic.dev/frontend/javascript-frameworks
 - [ ] Customizing Markdown — `REFINED` — https://statamic.dev/frontend/markdown
 - [ ] Blade Form Field Templates — `REFINED` — https://statamic.dev/frontend/blade-form-fields
-- [ ] Frontend Advanced Topics — `PENDING (page missing/removed in 6.x; /frontend/advanced-topics returns 404)` — https://statamic.dev/frontend/advanced-topics
+- [LINK_ONLY] Frontend Advanced Topics (removed in 6.x; /frontend/advanced-topics returns 404) — https://statamic.dev/frontend/advanced-topics
 
 ---
 
@@ -192,38 +192,38 @@ Next (pending):
 
 ### Ops / Deployment
 
-- [ ] **Timezones (UTC, display timezone, modifiers)** — `DRAFTED`
+- [ ] **Timezones (UTC, display timezone, modifiers)** — `REFINED`
   - Docs: https://statamic.dev/knowledge-base/tips/timezones
   - Related: https://statamic.dev/knowledge-base/tips/change-timezone-to-utc
 
-- [ ] **Zero downtime deployments (multi-release, cache isolation, git automation)** — `DRAFTED`
+- [ ] **Zero downtime deployments (multi-release, cache isolation, git automation)** — `REFINED`
   - Docs: https://statamic.dev/knowledge-base/tips/zero-downtime-deployments
 
 ### Performance
 
-- [ ] **Optimizing assets (stache watcher, remote disks)** — `DRAFTED`
+- [ ] **Optimizing assets (stache watcher, remote disks)** — `REFINED`
   - Docs: https://statamic.dev/knowledge-base/tips/optimizing-assets
 
-- [ ] **Caching overview** — `DRAFTED`
+- [ ] **Caching overview** — `REFINED`
   - Docs: https://statamic.dev/advanced-topics/caching
 
-- [ ] **Stache** — `DRAFTED`
+- [ ] **Stache** — `REFINED`
   - Docs: https://statamic.dev/advanced-topics/stache
 
 - [ ] **Static caching** — `REFINED`
   - Docs: https://statamic.dev/advanced-topics/static-caching
 
 Advanced Topics (more):
-- [ ] CLI — `DRAFTED` — https://statamic.dev/cli
+- [ ] CLI — `REFINED` — https://statamic.dev/cli
 - [LINK_ONLY] CLI (alt URL) — https://statamic.dev/advanced-topics/cli
-- [ ] YAML — `DRAFTED` — https://statamic.dev/advanced-topics/yaml
-- [ ] Lifecycle — `DRAFTED` — https://statamic.dev/advanced-topics/lifecycle
-- [ ] Debugging — `DRAFTED` — https://statamic.dev/advanced-topics/debugging
-- [ ] Sending email — `DRAFTED` — https://statamic.dev/advanced-topics/email
+- [ ] YAML — `REFINED` — https://statamic.dev/advanced-topics/yaml
+- [ ] Lifecycle — `REFINED` — https://statamic.dev/advanced-topics/lifecycle
+- [ ] Debugging — `REFINED` — https://statamic.dev/advanced-topics/debugging
+- [ ] Sending email — `REFINED` — https://statamic.dev/advanced-topics/email
 - [LINK_ONLY] Sending email (old URL?) — https://statamic.dev/advanced-topics/sending-email
-- [ ] Task scheduling — `DRAFTED` — https://statamic.dev/advanced-topics/scheduling
-- [ ] OAuth — `DRAFTED` — https://statamic.dev/advanced-topics/oauth
-- [ ] Sites API — `DRAFTED` — https://statamic.dev/advanced-topics/sites-api
+- [ ] Task scheduling — `REFINED` — https://statamic.dev/advanced-topics/scheduling
+- [ ] OAuth — `REFINED` — https://statamic.dev/advanced-topics/oauth
+- [ ] Sites API — `REFINED` — https://statamic.dev/advanced-topics/sites-api
 
 ### Frontend / Templating
 
@@ -246,47 +246,47 @@ Advanced Topics (more):
 
 ## Phase 5: Addons / Extending (initial slice)
 
-- [ ] Addons overview — `DRAFTED` — https://statamic.dev/addons/overview
+- [ ] Addons overview — `REFINED` — https://statamic.dev/addons/overview
 - [ ] Building an addon — `REFINED` — https://statamic.dev/addons/building-an-addon
-- [ ] Tags overview — `DRAFTED` — https://statamic.dev/tags/overview
-- [ ] Modifiers overview — `DRAFTED` — https://statamic.dev/modifiers/overview
-- [ ] Build a fieldtype — `DRAFTED` — https://statamic.dev/fieldtypes/build-a-fieldtype
+- [ ] Tags overview — `REFINED` — https://statamic.dev/tags/overview
+- [ ] Modifiers overview — `REFINED` — https://statamic.dev/modifiers/overview
+- [ ] Build a fieldtype — `REFINED` — https://statamic.dev/fieldtypes/build-a-fieldtype
 
 Next (pending):
-- [ ] Vite tooling (addons) — `DRAFTED` — https://statamic.dev/addons/vite-tooling
-- [ ] Building a tag — `DRAFTED` — https://statamic.dev/tags/building-a-tag
-- [ ] Extending modifiers — `DRAFTED` — https://statamic.dev/extending/modifiers
-- [ ] Widgets — `DRAFTED` — https://statamic.dev/widgets/all-widgets
+- [ ] Vite tooling (addons) — `REFINED` — https://statamic.dev/addons/vite-tooling
+- [ ] Building a tag — `REFINED` — https://statamic.dev/tags/building-a-tag
+- [ ] Extending modifiers — `REFINED` — https://statamic.dev/extending/modifiers
+- [ ] Widgets — `REFINED` — https://statamic.dev/widgets/all-widgets
 
 Next-next (pending):
-- [ ] Widgets: building a widget — `DRAFTED` — https://statamic.dev/widgets/building-a-widget
-- [ ] Utilities (CP) — `DRAFTED` — https://statamic.dev/control-panel/utilities
-- [ ] Commands (addons) — `DRAFTED` — https://statamic.dev/addons/building-an-addon
+- [ ] Widgets: building a widget — `REFINED` — https://statamic.dev/widgets/building-a-widget
+- [ ] Utilities (CP) — `REFINED` — https://statamic.dev/control-panel/utilities
+- [ ] Commands (addons) — `REFINED` — https://statamic.dev/addons/building-an-addon
   - Playbook: `references/playbooks/addons-commands.md`
-- [ ] Control Panel (Inertia pages) — `DRAFTED` — https://statamic.dev/control-panel/css-javascript
-- [ ] Testing (addons) — `DRAFTED` — https://statamic.dev/addons/testing
+- [ ] Control Panel (Inertia pages) — `REFINED` — https://statamic.dev/control-panel/css-javascript
+- [ ] Testing (addons) — `REFINED` — https://statamic.dev/addons/testing
 
 Next-next-next (pending):
-- [ ] Actions — `DRAFTED` — https://statamic.dev/backend-apis/actions
-- [ ] Hooks — `DRAFTED` — https://statamic.dev/backend-apis/hooks
-- [ ] Events — `DRAFTED` — https://statamic.dev/backend-apis/events
-- [ ] Vue components — `DRAFTED` — https://statamic.dev/vue-components/overview
-- [ ] UI components — `DRAFTED` — https://ui.statamic.dev
+- [ ] Actions — `REFINED` — https://statamic.dev/backend-apis/actions
+- [ ] Hooks — `REFINED` — https://statamic.dev/backend-apis/hooks
+- [ ] Events — `REFINED` — https://statamic.dev/backend-apis/events
+- [ ] Vue components — `REFINED` — https://statamic.dev/vue-components/overview
+- [ ] UI components — `REFINED` — https://ui.statamic.dev
 
 Next (pending):
-- [ ] Blink cache — `DRAFTED` — https://statamic.dev/backend-apis/blink-cache
-- [ ] Event bus — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/event-bus
-- [ ] Dirty state tracking — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/dirty-state-tracking
-- [ ] Slugs — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/slugs
-- [ ] Progress — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/progress
+- [ ] Blink cache — `REFINED` — https://statamic.dev/backend-apis/blink-cache
+- [ ] Event bus — `REFINED (page empty in 6.x)` — https://statamic.dev/backend-apis/event-bus
+- [ ] Dirty state tracking — `REFINED (page empty in 6.x)` — https://statamic.dev/backend-apis/dirty-state-tracking
+- [ ] Slugs — `REFINED (page empty in 6.x)` — https://statamic.dev/backend-apis/slugs
+- [ ] Progress — `REFINED (page empty in 6.x)` — https://statamic.dev/backend-apis/progress
 
 Next after that (pending):
 - [LINK_ONLY] Data (alt URL) — https://statamic.dev/backend-apis/data
 - [LINK_ONLY] Query scopes & filters (alt URL) — https://statamic.dev/backend-apis/query-scopes-and-filters
-- [ ] Query scopes & filters — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/query-scopes-filters
-- [ ] Repositories — `DRAFTED` — https://statamic.dev/backend-apis/repositories
-- [ ] Data retrieval and manipulation — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/data-retrieval-and-manipulation
-- [ ] Resource APIs — `DRAFTED (page stub in 6.x)` — https://statamic.dev/backend-apis/resource-apis
+- [ ] Query scopes & filters — `REFINED (page empty in 6.x)` — https://statamic.dev/backend-apis/query-scopes-filters
+- [ ] Repositories — `REFINED` — https://statamic.dev/backend-apis/repositories
+- [ ] Data retrieval and manipulation — `REFINED (page empty in 6.x)` — https://statamic.dev/backend-apis/data-retrieval-and-manipulation
+- [ ] Resource APIs — `REFINED (page stub in 6.x)` — https://statamic.dev/backend-apis/resource-apis
 
 Resource APIs (concrete repositories) — `[LINK_ONLY]`:
 - https://statamic.dev/backend-apis/resource-apis/asset-container-repository

@@ -39,15 +39,16 @@ check_exists "dev-scripts/search_statamic_docs.sh"
 check_exists "dev-scripts/smoke_statamic_docs.sh"
 check_exists "dev-scripts/generate_playbook_index.sh"
 check_exists "dev-scripts/check_playbook_sync.sh"
+check_exists "skills/stamic-skill/scripts/update_statamic_docs.sh"
 check_exists "skills/stamic-skill/scripts/search_statamic_docs.sh"
+check_exists "skills/stamic-skill/references/docs-mirror-head.txt"
 
 if rg -n "\\./scripts/update_statamic_docs\\.sh" \
-  README.md \
   skills/stamic-skill/README.md \
   skills/stamic-skill/SKILL.md >/dev/null; then
-  err "stale reference found: ./scripts/update_statamic_docs.sh"
+  ok "runtime update script is referenced in skill docs"
 else
-  ok "no stale references to removed update script path"
+  err "missing runtime reference to ./scripts/update_statamic_docs.sh in skill docs"
 fi
 
 skill_version="$(sed -n 's/^  version: "\(.*\)"/\1/p' skills/stamic-skill/SKILL.md | head -n 1)"
