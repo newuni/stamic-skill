@@ -144,6 +144,7 @@ Also drafted:
 
 Extending:
 - [ ] CP Navigation — `REFINED` — https://statamic.dev/extending/cp-navigation
+- [LINK_ONLY] CP Navigation (legacy/alt URL) — https://statamic.dev/control-panel/cp-navigation
 
 ---
 
@@ -166,6 +167,7 @@ Next (pending):
 - [ ] Protecting Content — `DRAFTED` — https://statamic.dev/frontend/protecting-content
 - [ ] REST API — `DRAFTED` — https://statamic.dev/frontend/rest-api
 - [ ] GraphQL API — `DRAFTED` — https://statamic.dev/graphql
+- [LINK_ONLY] GraphQL API (alt URL) — https://statamic.dev/frontend/graphql
 - [ ] Front-End Frameworks — `REFINED` — https://statamic.dev/frontend/javascript-frameworks
 - [ ] Customizing Markdown — `REFINED` — https://statamic.dev/frontend/markdown
 - [ ] Blade Form Field Templates — `REFINED` — https://statamic.dev/frontend/blade-form-fields
@@ -174,6 +176,19 @@ Next (pending):
 ---
 
 ## Later phases (not core-first, kept for reference)
+
+### Starter Kits
+
+- [LINK_ONLY] Starter kits overview — https://statamic.dev/starter-kits/overview
+- [LINK_ONLY] Installing a starter kit — https://statamic.dev/starter-kits/installing-a-starter-kit
+- [LINK_ONLY] Creating a starter kit — https://statamic.dev/starter-kits/creating-a-starter-kit
+- [LINK_ONLY] Updating a starter kit — https://statamic.dev/starter-kits/updating-a-starter-kit
+
+### Knowledge Base (indexes)
+
+- [LINK_ONLY] Content Managers Guide — https://statamic.dev/knowledge-base/content-managers-guide
+- [LINK_ONLY] Tips index — https://statamic.dev/knowledge-base/tips
+- [LINK_ONLY] Troubleshooting index — https://statamic.dev/knowledge-base/troubleshooting
 
 ### Ops / Deployment
 
@@ -200,10 +215,12 @@ Next (pending):
 
 Advanced Topics (more):
 - [ ] CLI — `DRAFTED` — https://statamic.dev/cli
+- [LINK_ONLY] CLI (alt URL) — https://statamic.dev/advanced-topics/cli
 - [ ] YAML — `DRAFTED` — https://statamic.dev/advanced-topics/yaml
 - [ ] Lifecycle — `DRAFTED` — https://statamic.dev/advanced-topics/lifecycle
 - [ ] Debugging — `DRAFTED` — https://statamic.dev/advanced-topics/debugging
-- [ ] Sending email — `PENDING (web_fetch failing / page missing in 6.x)` — https://statamic.dev/advanced-topics/sending-email
+- [ ] Sending email — `DRAFTED` — https://statamic.dev/advanced-topics/email
+- [LINK_ONLY] Sending email (old URL?) — https://statamic.dev/advanced-topics/sending-email
 - [ ] Task scheduling — `DRAFTED` — https://statamic.dev/advanced-topics/scheduling
 - [ ] OAuth — `DRAFTED` — https://statamic.dev/advanced-topics/oauth
 - [ ] Sites API — `DRAFTED` — https://statamic.dev/advanced-topics/sites-api
@@ -255,8 +272,26 @@ Next (pending):
 - [ ] Progress — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/progress
 
 Next after that (pending):
+- [LINK_ONLY] Data (alt URL) — https://statamic.dev/backend-apis/data
+- [LINK_ONLY] Query scopes & filters (alt URL) — https://statamic.dev/backend-apis/query-scopes-and-filters
 - [ ] Query scopes & filters — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/query-scopes-filters
 - [ ] Repositories — `DRAFTED` — https://statamic.dev/backend-apis/repositories
 - [ ] Data retrieval and manipulation — `DRAFTED (page empty in 6.x)` — https://statamic.dev/backend-apis/data-retrieval-and-manipulation
 - [ ] Resource APIs — `DRAFTED (page stub in 6.x)` — https://statamic.dev/backend-apis/resource-apis
+
+Resource APIs (concrete repositories) — `[LINK_ONLY]`:
+- https://statamic.dev/backend-apis/resource-apis/asset-container-repository
+- https://statamic.dev/backend-apis/resource-apis/asset-repository
+- https://statamic.dev/backend-apis/resource-apis/collection-repository
+- https://statamic.dev/backend-apis/resource-apis/entry-repository
+- https://statamic.dev/backend-apis/resource-apis/form-repository
+- https://statamic.dev/backend-apis/resource-apis/form-submission-repository
+- https://statamic.dev/backend-apis/resource-apis/global-repository
+- https://statamic.dev/backend-apis/resource-apis/site-repository
+- https://statamic.dev/backend-apis/resource-apis/taxonomy-repository
+- https://statamic.dev/backend-apis/resource-apis/term-repository
+- https://statamic.dev/backend-apis/resource-apis/user-group-repository
+- https://statamic.dev/backend-apis/resource-apis/user-repository
+- https://statamic.dev/backend-apis/resource-apis/user-role-repository
+
 - [ ] Vue components (deeper) — `REFINED` — (recipes + append patterns)
