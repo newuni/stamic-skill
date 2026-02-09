@@ -44,6 +44,8 @@ Eso instalará `stamic-skill` como skill local dentro del proyecto.
 
 ### Codex (OpenAI) vía `npx skills`
 
+> Nota: si tú dices/usas “`npx skill`”, normalmente te refieres al CLI `skills`.
+
 Si no quieres depender de Boost (o si `boost:add-skill` falla por red), puedes instalar la skill directamente en **Codex** usando el instalador estándar del ecosistema: [`skills` (Vercel)](https://github.com/vercel-labs/skills).
 
 **Listar skills disponibles en el repo:**
@@ -55,6 +57,22 @@ npx skills add newuni/stamic-skill --list
 **Instalar la skill para Codex (recomendado global):**
 
 ```bash
+npx skills add newuni/stamic-skill --skill stamic-skill --agent codex -g -y
+```
+
+**Actualizar (update / re-sync):**
+
+Re-ejecuta el mismo comando de `add` (es idempotente y fuerza a re-sincronizar el contenido):
+
+```bash
+npx skills add newuni/stamic-skill --skill stamic-skill --agent codex -g -y
+```
+
+Si quieres asegurarte de que estás cogiendo lo último:
+
+```bash
+# (opcional) borrar y re-instalar
+npx skills remove stamic-skill --agent codex -g -y
 npx skills add newuni/stamic-skill --skill stamic-skill --agent codex -g -y
 ```
 
