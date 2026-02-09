@@ -5,7 +5,7 @@ set -euo pipefail
 # This is repo-maintenance tooling (not part of the published skill runtime).
 #
 # Usage:
-#   ./scripts/update_statamic_docs.sh [<target_dir>]
+#   ./dev-scripts/update_statamic_docs.sh [<target_dir>]
 #
 # Defaults:
 #   <repo-root>/skills/.cache/statamic-docs
@@ -15,7 +15,7 @@ usage() {
 Update (clone/pull) the Statamic docs mirror.
 
 Usage:
-  ./scripts/update_statamic_docs.sh [<target_dir>]
+  ./dev-scripts/update_statamic_docs.sh [<target_dir>]
 
 Defaults:
   <repo-root>/skills/.cache/statamic-docs

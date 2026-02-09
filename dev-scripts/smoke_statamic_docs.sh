@@ -4,7 +4,7 @@ set -euo pipefail
 # Quick smoke test for the Statamic docs mirror + search tooling.
 #
 # Usage:
-#   ./scripts/smoke_statamic_docs.sh
+#   ./dev-scripts/smoke_statamic_docs.sh
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
