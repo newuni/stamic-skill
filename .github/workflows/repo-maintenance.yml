@@ -30,3 +30,13 @@ jobs:
 
       - name: Run smoke test
         run: ./dev-scripts/smoke_statamic_docs.sh
+
+  playbook_sync:
+    name: Playbook Sync
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify playbook sync
+        run: ./dev-scripts/check_playbook_sync.sh

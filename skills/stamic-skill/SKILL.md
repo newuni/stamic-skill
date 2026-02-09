@@ -4,7 +4,7 @@ description: Statamic 6 development skill with documentation-backed guidance fro
 license: MIT
 metadata:
   author: newuni
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # stamic-skill (Statamic 6 Dev)

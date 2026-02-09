@@ -7,5 +7,6 @@
 - Use Statamic’s Control Panel utilities to test email if available (Utility: email test).
 
 ## Sources
+- https://statamic.dev/advanced-topics/email
 - https://statamic.dev/advanced-topics/sending-email
 - https://laravel.com/docs/mail

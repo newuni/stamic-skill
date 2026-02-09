@@ -227,13 +227,13 @@ Advanced Topics (more):
 
 ### Frontend / Templating
 
-- [ ] **Antlers** — `PENDING`
+- [ ] **Antlers** — `REFINED`
   - Docs: https://statamic.dev/frontend/antlers
 
-- [ ] **Blade** — `PENDING`
+- [ ] **Blade** — `REFINED`
   - Docs: https://statamic.dev/frontend/blade
 
-- [ ] **Content queries** — `PENDING`
+- [ ] **Content queries** — `REFINED`
   - Docs: https://statamic.dev/frontend/content-queries
 
 - [ ] **Meta: Tags / Modifiers / Fieldtypes / Variables** — `REFINED`

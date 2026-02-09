@@ -50,6 +50,8 @@ Recomendado: instalar `rg` (ripgrep). Si no, hace fallback a `grep` (más lento 
 ## Validación rápida
 
 - Desde la raíz del repo: `./dev-scripts/check_repo_consistency.sh`
+- Regenerar índice: `./dev-scripts/generate_playbook_index.sh`
+- Validar sync mapa↔playbooks: `./dev-scripts/check_playbook_sync.sh`
 - Smoke mirror+búsqueda: `./dev-scripts/smoke_statamic_docs.sh`
 - Comprueba que Clawdbot descubre la carpeta como `stamic-skill` (según cómo la instales en tu workspace).
 - Si no aparece, reinicia el gateway.

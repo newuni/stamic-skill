@@ -50,6 +50,8 @@ Run these from the repository root:
 ```bash
 ./dev-scripts/update_statamic_docs.sh
 ./dev-scripts/check_repo_consistency.sh
+./dev-scripts/generate_playbook_index.sh
+./dev-scripts/check_playbook_sync.sh
 ./dev-scripts/smoke_statamic_docs.sh
 ```
 

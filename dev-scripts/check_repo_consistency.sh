@@ -37,6 +37,8 @@ check_exists() {
 check_exists "dev-scripts/update_statamic_docs.sh"
 check_exists "dev-scripts/search_statamic_docs.sh"
 check_exists "dev-scripts/smoke_statamic_docs.sh"
+check_exists "dev-scripts/generate_playbook_index.sh"
+check_exists "dev-scripts/check_playbook_sync.sh"
 check_exists "skills/stamic-skill/scripts/search_statamic_docs.sh"
 
 if rg -n "\\./scripts/update_statamic_docs\\.sh" \

@@ -10,5 +10,6 @@
   - open in browser and/or check Statamic docs repo.
 
 ## Sources
+- https://statamic.dev/advanced-topics/scheduling
 - https://statamic.dev/advanced-topics/task-scheduling
 - https://laravel.com/docs/scheduling

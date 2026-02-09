@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2 — 2026-02-09
+
+- Added `dev-scripts/generate_playbook_index.sh` to build `skills/stamic-skill/references/playbook-index.md`.
+- Added `dev-scripts/check_playbook_sync.sh` to validate playbook-map URL coverage and index freshness.
+- Added Playbook Sync CI job in `.github/workflows/repo-maintenance.yml`.
+- Updated docs and playbook sources to use canonical URL mappings for sync checks.
+
 ## 1.0.1 — 2026-02-09
 
 - Updated docs to reflect the script split: mirror maintenance lives in `dev-scripts/` and runtime search stays in `skills/stamic-skill/scripts/`.

@@ -37,4 +37,5 @@
 - `php artisan cache:clear` clears the Laravel cache (which also contains the Stache).
 
 ## Sources
+- https://statamic.dev/cli
 - https://statamic.dev/advanced-topics/cli
