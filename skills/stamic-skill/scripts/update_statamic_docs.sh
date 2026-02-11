@@ -123,6 +123,7 @@ if [ -e "$TARGET_DIR" ] && [ ! -d "$TARGET_DIR" ]; then
 fi
 
 LOCK_DIR="${TARGET_DIR}.lock"
+mkdir -p "$(dirname "$LOCK_DIR")"
 acquire_lock
 
 if [ -d "$TARGET_DIR/.git" ]; then
